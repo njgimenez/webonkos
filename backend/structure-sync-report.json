@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-09-15T20:42:08.497Z",
+  "summary": {
+    "totalLogs": 16,
+    "totalErrors": 0,
+    "success": true
+  },
+  "logs": [
+    "[2025-09-15T20:42:05.994Z] [INFO] 🚀 Iniciando sincronización de estructura de bases de datos...",
+    "[2025-09-15T20:42:05.996Z] [INFO] 🔌 Conectando a bases de datos...",
+    "[2025-09-15T20:42:06.029Z] [INFO] ✅ LOCAL conectado",
+    "[2025-09-15T20:42:07.134Z] [INFO] ✅ PROD conectado",
+    "[2025-09-15T20:42:07.135Z] [INFO] 🚀 Iniciando sincronización de estructuras...",
+    "[2025-09-15T20:42:07.136Z] [INFO] 🔄 Sincronizando estructura de tabla: categorias",
+    "[2025-09-15T20:42:07.668Z] [INFO] ✅ categorias: ADD_COLUMN - Agregar columna parent_id",
+    "[2025-09-15T20:42:07.827Z] [INFO] ✅ categorias: ADD_COLUMN - Agregar columna nivel",
+    "[2025-09-15T20:42:07.993Z] [INFO] ✅ categorias: ADD_COLUMN - Agregar columna ruta_completa",
+    "[2025-09-15T20:42:07.994Z] [INFO] 🔄 Sincronizando estructura de tabla: entradas",
+    "[2025-09-15T20:42:08.336Z] [INFO] ✅ entradas: ADD_COLUMN - Agregar columna categoria_id_backup",
+    "[2025-09-15T20:42:08.336Z] [INFO] ✅ entradas: INFO_ONLY - Columna categoria_id existe solo en PROD",
+    "[2025-09-15T20:42:08.337Z] [INFO] 🆕 Creando tabla faltante: entrada_categorias",
+    "[2025-09-15T20:42:08.496Z] [INFO] ✅ Tabla entrada_categorias creada en PROD",
+    "[2025-09-15T20:42:08.496Z] [INFO] ✅ Sincronización completada en 1361ms",
+    "[2025-09-15T20:42:08.497Z] [INFO] 📊 Resultados: 3 tablas, 6 cambios, 0 errores"
+  ],
+  "errors": []
+}

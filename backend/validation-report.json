@@ -1,0 +1,44 @@
+{
+  "timestamp": "2025-09-15T20:45:16.567Z",
+  "validationType": "POST_SYNC_VALIDATION",
+  "summary": {
+    "structure": {
+      "passed": 0,
+      "failed": 0,
+      "issues": []
+    },
+    "data": {
+      "passed": 16,
+      "failed": 1,
+      "issues": [
+        "categorias: LOCAL=15, PROD=19"
+      ]
+    },
+    "integrity": {
+      "passed": 2,
+      "failed": 0,
+      "issues": []
+    },
+    "overallSuccess": false
+  },
+  "logs": [
+    "[2025-09-15T20:45:08.455Z] [INFO] 🚀 Iniciando validación de sincronización...",
+    "[2025-09-15T20:45:08.459Z] [INFO] 🔌 Conectando a bases de datos para validación...",
+    "[2025-09-15T20:45:08.513Z] [INFO] ✅ LOCAL conectado",
+    "[2025-09-15T20:45:09.598Z] [INFO] ✅ PROD conectado",
+    "[2025-09-15T20:45:09.599Z] [INFO] 🏗️ Validando estructura de tablas...",
+    "[2025-09-15T20:45:09.661Z] [ERROR] Error validando estructura: column reference \"constraint_name\" is ambiguous",
+    "[2025-09-15T20:45:09.663Z] [INFO] 📊 Validando datos...",
+    "[2025-09-15T20:45:13.657Z] [INFO] ✅ Datos: 16 tablas coinciden, 1 diferencias",
+    "[2025-09-15T20:45:13.658Z] [INFO] 🔗 Validando integridad referencial...",
+    "[2025-09-15T20:45:16.566Z] [INFO] ✅ Integridad: 2 bases OK, 0 con problemas",
+    "[2025-09-15T20:45:16.567Z] [INFO] ✅ Validación completada en 8109ms"
+  ],
+  "errors": [
+    {
+      "error": "column reference \"constraint_name\" is ambiguous",
+      "context": "Error validando estructura",
+      "stack": "error: column reference \"constraint_name\" is ambiguous\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async SyncValidator.getDatabaseStructure (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/validate-sync.js:121:33)\n    at async SyncValidator.validateStructure (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/validate-sync.js:75:30)\n    at async SyncValidator.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/validate-sync.js:409:7)"
+    }
+  ]
+}

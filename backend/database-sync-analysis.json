@@ -1,0 +1,2433 @@
+{
+  "timestamp": "2025-09-15T22:52:37.984Z",
+  "local": {
+    "categorias": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('categorias_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "nombre",
+          "data_type": "character varying",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": 100
+        },
+        {
+          "column_name": "slug",
+          "data_type": "character varying",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": 100
+        },
+        {
+          "column_name": "descripcion",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "color_hex",
+          "data_type": "character varying",
+          "is_nullable": "YES",
+          "column_default": "'#667eea'::character varying",
+          "character_maximum_length": 7
+        },
+        {
+          "column_name": "orden_menu",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": "0",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "activo",
+          "data_type": "boolean",
+          "is_nullable": "YES",
+          "column_default": "true",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": "YES",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "updated_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": "YES",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "parent_id",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "nivel",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": "0",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "ruta_completa",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": "''::text",
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 15,
+      "constraints": [
+        {
+          "constraint_name": "categorias_parent_id_fkey",
+          "constraint_type": "FOREIGN KEY",
+          "column_name": "parent_id"
+        },
+        {
+          "constraint_name": "categorias_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        },
+        {
+          "constraint_name": "categorias_slug_key",
+          "constraint_type": "UNIQUE",
+          "column_name": "slug"
+        }
+      ],
+      "owner": "postgres"
+    },
+    "centro_medico": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('centro_medico_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "nombre",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "direccion",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "telefono",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "correo",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "ruc",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 0,
+      "constraints": [
+        {
+          "constraint_name": "centro_medico_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        }
+      ],
+      "owner": "postgres"
+    },
+    "citas": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('citas_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "paciente_id",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "medico_id",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "fecha",
+          "data_type": "timestamp without time zone",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "motivo",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "estado",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": "'agendada'::text",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "observaciones",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "duracion",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": "30",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "fecha_creacion",
+          "data_type": "timestamp without time zone",
+          "is_nullable": "YES",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 22,
+      "constraints": [
+        {
+          "constraint_name": "citas_medico_id_fkey",
+          "constraint_type": "FOREIGN KEY",
+          "column_name": "medico_id"
+        },
+        {
+          "constraint_name": "citas_paciente_id_fkey",
+          "constraint_type": "FOREIGN KEY",
+          "column_name": "paciente_id"
+        },
+        {
+          "constraint_name": "citas_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        }
+      ],
+      "owner": "postgres"
+    },
+    "entrada_categorias": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('entrada_categorias_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "entrada_id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "categoria_id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": "YES",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 26,
+      "constraints": [
+        {
+          "constraint_name": "entrada_categorias_categoria_id_fkey",
+          "constraint_type": "FOREIGN KEY",
+          "column_name": "categoria_id"
+        },
+        {
+          "constraint_name": "entrada_categorias_entrada_id_fkey",
+          "constraint_type": "FOREIGN KEY",
+          "column_name": "entrada_id"
+        },
+        {
+          "constraint_name": "entrada_categorias_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        },
+        {
+          "constraint_name": "entrada_categorias_entrada_id_categoria_id_key",
+          "constraint_type": "UNIQUE",
+          "column_name": "categoria_id"
+        },
+        {
+          "constraint_name": "entrada_categorias_entrada_id_categoria_id_key",
+          "constraint_type": "UNIQUE",
+          "column_name": "entrada_id"
+        }
+      ],
+      "owner": "master"
+    },
+    "entradas": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('entradas_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "titulo",
+          "data_type": "character varying",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": 255
+        },
+        {
+          "column_name": "slug",
+          "data_type": "character varying",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": 255
+        },
+        {
+          "column_name": "contenido",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "resumen",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "imagen_principal",
+          "data_type": "character varying",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": 500
+        },
+        {
+          "column_name": "autor_id",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "estado",
+          "data_type": "character varying",
+          "is_nullable": "YES",
+          "column_default": "'borrador'::character varying",
+          "character_maximum_length": 20
+        },
+        {
+          "column_name": "fecha_publicacion",
+          "data_type": "timestamp without time zone",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "meta_title",
+          "data_type": "character varying",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": 255
+        },
+        {
+          "column_name": "meta_description",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "tags",
+          "data_type": "jsonb",
+          "is_nullable": "YES",
+          "column_default": "'[]'::jsonb",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "vistas",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": "0",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "destacado",
+          "data_type": "boolean",
+          "is_nullable": "YES",
+          "column_default": "false",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "orden",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": "0",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": "YES",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "updated_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": "YES",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "tipo_entrada",
+          "data_type": "character varying",
+          "is_nullable": "YES",
+          "column_default": "'entrada'::character varying",
+          "character_maximum_length": 20
+        },
+        {
+          "column_name": "categoria_id_backup",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 56,
+      "constraints": [
+        {
+          "constraint_name": "entradas_autor_id_fkey",
+          "constraint_type": "FOREIGN KEY",
+          "column_name": "autor_id"
+        },
+        {
+          "constraint_name": "entradas_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        },
+        {
+          "constraint_name": "entradas_slug_key",
+          "constraint_type": "UNIQUE",
+          "column_name": "slug"
+        }
+      ],
+      "owner": "postgres"
+    },
+    "especialidades": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('especialidades_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "nombre",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 4,
+      "constraints": [
+        {
+          "constraint_name": "especialidades_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        }
+      ],
+      "owner": "postgres"
+    },
+    "historial_citas": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('historial_citas_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "cita_id",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "fecha_cambio",
+          "data_type": "timestamp without time zone",
+          "is_nullable": "YES",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "estado_anterior",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "estado_nuevo",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "comentario",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 0,
+      "constraints": [
+        {
+          "constraint_name": "historial_citas_cita_id_fkey",
+          "constraint_type": "FOREIGN KEY",
+          "column_name": "cita_id"
+        },
+        {
+          "constraint_name": "historial_citas_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        }
+      ],
+      "owner": "postgres"
+    },
+    "horarios_medicos": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('horarios_medicos_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "medico_id",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "dia_semana",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "hora_inicio",
+          "data_type": "time without time zone",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "hora_fin",
+          "data_type": "time without time zone",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 0,
+      "constraints": [
+        {
+          "constraint_name": "horarios_medicos_medico_id_fkey",
+          "constraint_type": "FOREIGN KEY",
+          "column_name": "medico_id"
+        },
+        {
+          "constraint_name": "horarios_medicos_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        }
+      ],
+      "owner": "postgres"
+    },
+    "media": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('media_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "nombre_archivo",
+          "data_type": "character varying",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": 255
+        },
+        {
+          "column_name": "nombre_original",
+          "data_type": "character varying",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": 255
+        },
+        {
+          "column_name": "tipo_mime",
+          "data_type": "character varying",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": 100
+        },
+        {
+          "column_name": "tamaño_bytes",
+          "data_type": "bigint",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "url",
+          "data_type": "character varying",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": 500
+        },
+        {
+          "column_name": "alt_text",
+          "data_type": "character varying",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": 255
+        },
+        {
+          "column_name": "uploaded_by",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": "YES",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 167,
+      "constraints": [
+        {
+          "constraint_name": "media_uploaded_by_fkey",
+          "constraint_type": "FOREIGN KEY",
+          "column_name": "uploaded_by"
+        },
+        {
+          "constraint_name": "media_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        }
+      ],
+      "owner": "postgres"
+    },
+    "medicos": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('medicos_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "nombre",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "dni",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "correo",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "telefono",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "estado",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": "'activo'::text",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "especialidad_id",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "centro_id",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 4,
+      "constraints": [
+        {
+          "constraint_name": "medicos_centro_id_fkey",
+          "constraint_type": "FOREIGN KEY",
+          "column_name": "centro_id"
+        },
+        {
+          "constraint_name": "medicos_especialidad_id_fkey",
+          "constraint_type": "FOREIGN KEY",
+          "column_name": "especialidad_id"
+        },
+        {
+          "constraint_name": "medicos_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        },
+        {
+          "constraint_name": "medicos_dni_key",
+          "constraint_type": "UNIQUE",
+          "column_name": "dni"
+        }
+      ],
+      "owner": "postgres"
+    },
+    "menu_items": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('menu_items_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "titulo",
+          "data_type": "character varying",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": 100
+        },
+        {
+          "column_name": "tipo",
+          "data_type": "character varying",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": 20
+        },
+        {
+          "column_name": "url",
+          "data_type": "character varying",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": 500
+        },
+        {
+          "column_name": "orden",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": "0",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "parent_id",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "activo",
+          "data_type": "boolean",
+          "is_nullable": "YES",
+          "column_default": "true",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "icono",
+          "data_type": "character varying",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": 50
+        },
+        {
+          "column_name": "target",
+          "data_type": "character varying",
+          "is_nullable": "YES",
+          "column_default": "'_self'::character varying",
+          "character_maximum_length": 10
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": "YES",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 4,
+      "constraints": [
+        {
+          "constraint_name": "menu_items_parent_id_fkey",
+          "constraint_type": "FOREIGN KEY",
+          "column_name": "parent_id"
+        },
+        {
+          "constraint_name": "menu_items_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        }
+      ],
+      "owner": "postgres"
+    },
+    "pacientes": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('pacientes_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "nombre",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "dni",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "telefono",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "correo",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "fecha_nacimiento",
+          "data_type": "date",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "estado_vital",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": "'vivo'::text",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "fecha_registro",
+          "data_type": "timestamp without time zone",
+          "is_nullable": "YES",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "estado",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": "'activo'::text",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "tipo_documento",
+          "data_type": "character varying",
+          "is_nullable": "YES",
+          "column_default": "'DNI'::character varying",
+          "character_maximum_length": 20
+        },
+        {
+          "column_name": "numero_documento",
+          "data_type": "character varying",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": 20
+        }
+      ],
+      "recordCount": 38,
+      "constraints": [
+        {
+          "constraint_name": "pacientes_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        },
+        {
+          "constraint_name": "pacientes_dni_key",
+          "constraint_type": "UNIQUE",
+          "column_name": "dni"
+        }
+      ],
+      "owner": "postgres"
+    },
+    "permisos": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('permisos_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "nombre",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "descripcion",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 0,
+      "constraints": [
+        {
+          "constraint_name": "permisos_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        },
+        {
+          "constraint_name": "permisos_nombre_key",
+          "constraint_type": "UNIQUE",
+          "column_name": "nombre"
+        }
+      ],
+      "owner": "postgres"
+    },
+    "rol_permiso": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('rol_permiso_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "rol_id",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "permiso_id",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 0,
+      "constraints": [
+        {
+          "constraint_name": "rol_permiso_permiso_id_fkey",
+          "constraint_type": "FOREIGN KEY",
+          "column_name": "permiso_id"
+        },
+        {
+          "constraint_name": "rol_permiso_rol_id_fkey",
+          "constraint_type": "FOREIGN KEY",
+          "column_name": "rol_id"
+        },
+        {
+          "constraint_name": "rol_permiso_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        },
+        {
+          "constraint_name": "rol_permiso_rol_id_permiso_id_key",
+          "constraint_type": "UNIQUE",
+          "column_name": "permiso_id"
+        },
+        {
+          "constraint_name": "rol_permiso_rol_id_permiso_id_key",
+          "constraint_type": "UNIQUE",
+          "column_name": "rol_id"
+        }
+      ],
+      "owner": "postgres"
+    },
+    "roles": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('roles_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "nombre",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "descripcion",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 1,
+      "constraints": [
+        {
+          "constraint_name": "roles_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        },
+        {
+          "constraint_name": "roles_nombre_key",
+          "constraint_type": "UNIQUE",
+          "column_name": "nombre"
+        }
+      ],
+      "owner": "postgres"
+    },
+    "usuario_rol": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('usuario_rol_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "usuario_id",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "rol_id",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 1,
+      "constraints": [
+        {
+          "constraint_name": "usuario_rol_rol_id_fkey",
+          "constraint_type": "FOREIGN KEY",
+          "column_name": "rol_id"
+        },
+        {
+          "constraint_name": "usuario_rol_usuario_id_fkey",
+          "constraint_type": "FOREIGN KEY",
+          "column_name": "usuario_id"
+        },
+        {
+          "constraint_name": "usuario_rol_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        },
+        {
+          "constraint_name": "usuario_rol_usuario_id_rol_id_key",
+          "constraint_type": "UNIQUE",
+          "column_name": "rol_id"
+        },
+        {
+          "constraint_name": "usuario_rol_usuario_id_rol_id_key",
+          "constraint_type": "UNIQUE",
+          "column_name": "usuario_id"
+        }
+      ],
+      "owner": "postgres"
+    },
+    "usuarios": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('usuarios_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "nombre",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "correo",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "contraseña",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "estado",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": "'activo'::text",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "fecha_creacion",
+          "data_type": "timestamp without time zone",
+          "is_nullable": "YES",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 1,
+      "constraints": [
+        {
+          "constraint_name": "usuarios_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        },
+        {
+          "constraint_name": "usuarios_correo_key",
+          "constraint_type": "UNIQUE",
+          "column_name": "correo"
+        }
+      ],
+      "owner": "postgres"
+    }
+  },
+  "prod": {
+    "categorias": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('categorias_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "nombre",
+          "data_type": "character varying",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": 100
+        },
+        {
+          "column_name": "slug",
+          "data_type": "character varying",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": 100
+        },
+        {
+          "column_name": "descripcion",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "color_hex",
+          "data_type": "character varying",
+          "is_nullable": "YES",
+          "column_default": "'#667eea'::character varying",
+          "character_maximum_length": 7
+        },
+        {
+          "column_name": "orden_menu",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": "0",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "activo",
+          "data_type": "boolean",
+          "is_nullable": "YES",
+          "column_default": "true",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": "YES",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "updated_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": "YES",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "parent_id",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "nivel",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": "0",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "ruta_completa",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": "''::text",
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 19,
+      "constraints": [
+        {
+          "constraint_name": "categorias_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        },
+        {
+          "constraint_name": "categorias_slug_key",
+          "constraint_type": "UNIQUE",
+          "column_name": "slug"
+        }
+      ],
+      "owner": "onkos_user"
+    },
+    "centro_medico": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('centro_medico_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "nombre",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "direccion",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "telefono",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "correo",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "ruc",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 0,
+      "constraints": [
+        {
+          "constraint_name": "centro_medico_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        }
+      ],
+      "owner": "onkos_user"
+    },
+    "citas": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('citas_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "paciente_id",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "medico_id",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "fecha",
+          "data_type": "timestamp without time zone",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "motivo",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "estado",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": "'agendada'::text",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "observaciones",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "duracion",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": "30",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "fecha_creacion",
+          "data_type": "timestamp without time zone",
+          "is_nullable": "YES",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 21,
+      "constraints": [
+        {
+          "constraint_name": "citas_medico_id_fkey",
+          "constraint_type": "FOREIGN KEY",
+          "column_name": "medico_id"
+        },
+        {
+          "constraint_name": "citas_paciente_id_fkey",
+          "constraint_type": "FOREIGN KEY",
+          "column_name": "paciente_id"
+        },
+        {
+          "constraint_name": "citas_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        }
+      ],
+      "owner": "onkos_user"
+    },
+    "entrada_categorias": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('entrada_categorias_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "entrada_id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "categoria_id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": "YES",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 26,
+      "constraints": [
+        {
+          "constraint_name": "entrada_categorias_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        },
+        {
+          "constraint_name": "entrada_categorias_entrada_id_categoria_id_key",
+          "constraint_type": "UNIQUE",
+          "column_name": "categoria_id"
+        },
+        {
+          "constraint_name": "entrada_categorias_entrada_id_categoria_id_key",
+          "constraint_type": "UNIQUE",
+          "column_name": "entrada_id"
+        }
+      ],
+      "owner": "onkos_user"
+    },
+    "entradas": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('entradas_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "titulo",
+          "data_type": "character varying",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": 255
+        },
+        {
+          "column_name": "slug",
+          "data_type": "character varying",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": 255
+        },
+        {
+          "column_name": "contenido",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "resumen",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "imagen_principal",
+          "data_type": "character varying",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": 500
+        },
+        {
+          "column_name": "autor_id",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "estado",
+          "data_type": "character varying",
+          "is_nullable": "YES",
+          "column_default": "'borrador'::character varying",
+          "character_maximum_length": 20
+        },
+        {
+          "column_name": "fecha_publicacion",
+          "data_type": "timestamp without time zone",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "meta_title",
+          "data_type": "character varying",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": 255
+        },
+        {
+          "column_name": "meta_description",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "tags",
+          "data_type": "jsonb",
+          "is_nullable": "YES",
+          "column_default": "'[]'::jsonb",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "vistas",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": "0",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "destacado",
+          "data_type": "boolean",
+          "is_nullable": "YES",
+          "column_default": "false",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "orden",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": "0",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": "YES",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "updated_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": "YES",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "tipo_entrada",
+          "data_type": "character varying",
+          "is_nullable": "YES",
+          "column_default": "'entrada'::character varying",
+          "character_maximum_length": 20
+        },
+        {
+          "column_name": "categoria_id_backup",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 51,
+      "constraints": [
+        {
+          "constraint_name": "entradas_autor_id_fkey",
+          "constraint_type": "FOREIGN KEY",
+          "column_name": "autor_id"
+        },
+        {
+          "constraint_name": "entradas_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        },
+        {
+          "constraint_name": "entradas_slug_key",
+          "constraint_type": "UNIQUE",
+          "column_name": "slug"
+        }
+      ],
+      "owner": "onkos_user"
+    },
+    "especialidades": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('especialidades_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "nombre",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 4,
+      "constraints": [
+        {
+          "constraint_name": "especialidades_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        }
+      ],
+      "owner": "onkos_user"
+    },
+    "historial_citas": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('historial_citas_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "cita_id",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "fecha_cambio",
+          "data_type": "timestamp without time zone",
+          "is_nullable": "YES",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "estado_anterior",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "estado_nuevo",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "comentario",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 0,
+      "constraints": [
+        {
+          "constraint_name": "historial_citas_cita_id_fkey",
+          "constraint_type": "FOREIGN KEY",
+          "column_name": "cita_id"
+        },
+        {
+          "constraint_name": "historial_citas_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        }
+      ],
+      "owner": "onkos_user"
+    },
+    "horarios_medicos": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('horarios_medicos_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "medico_id",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "dia_semana",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "hora_inicio",
+          "data_type": "time without time zone",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "hora_fin",
+          "data_type": "time without time zone",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 0,
+      "constraints": [
+        {
+          "constraint_name": "horarios_medicos_medico_id_fkey",
+          "constraint_type": "FOREIGN KEY",
+          "column_name": "medico_id"
+        },
+        {
+          "constraint_name": "horarios_medicos_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        }
+      ],
+      "owner": "onkos_user"
+    },
+    "media": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('media_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "nombre_archivo",
+          "data_type": "character varying",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": 255
+        },
+        {
+          "column_name": "nombre_original",
+          "data_type": "character varying",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": 255
+        },
+        {
+          "column_name": "tipo_mime",
+          "data_type": "character varying",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": 100
+        },
+        {
+          "column_name": "tamaño_bytes",
+          "data_type": "bigint",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "url",
+          "data_type": "character varying",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": 500
+        },
+        {
+          "column_name": "alt_text",
+          "data_type": "character varying",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": 255
+        },
+        {
+          "column_name": "uploaded_by",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": "YES",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 167,
+      "constraints": [
+        {
+          "constraint_name": "media_uploaded_by_fkey",
+          "constraint_type": "FOREIGN KEY",
+          "column_name": "uploaded_by"
+        },
+        {
+          "constraint_name": "media_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        }
+      ],
+      "owner": "onkos_user"
+    },
+    "medicos": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('medicos_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "nombre",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "dni",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "correo",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "telefono",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "estado",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": "'activo'::text",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "especialidad_id",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "centro_id",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 4,
+      "constraints": [
+        {
+          "constraint_name": "medicos_centro_id_fkey",
+          "constraint_type": "FOREIGN KEY",
+          "column_name": "centro_id"
+        },
+        {
+          "constraint_name": "medicos_especialidad_id_fkey",
+          "constraint_type": "FOREIGN KEY",
+          "column_name": "especialidad_id"
+        },
+        {
+          "constraint_name": "medicos_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        },
+        {
+          "constraint_name": "medicos_dni_key",
+          "constraint_type": "UNIQUE",
+          "column_name": "dni"
+        }
+      ],
+      "owner": "onkos_user"
+    },
+    "menu_items": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('menu_items_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "titulo",
+          "data_type": "character varying",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": 100
+        },
+        {
+          "column_name": "tipo",
+          "data_type": "character varying",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": 20
+        },
+        {
+          "column_name": "url",
+          "data_type": "character varying",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": 500
+        },
+        {
+          "column_name": "orden",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": "0",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "parent_id",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "activo",
+          "data_type": "boolean",
+          "is_nullable": "YES",
+          "column_default": "true",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "icono",
+          "data_type": "character varying",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": 50
+        },
+        {
+          "column_name": "target",
+          "data_type": "character varying",
+          "is_nullable": "YES",
+          "column_default": "'_self'::character varying",
+          "character_maximum_length": 10
+        },
+        {
+          "column_name": "created_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": "YES",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 4,
+      "constraints": [
+        {
+          "constraint_name": "menu_items_parent_id_fkey",
+          "constraint_type": "FOREIGN KEY",
+          "column_name": "parent_id"
+        },
+        {
+          "constraint_name": "menu_items_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        }
+      ],
+      "owner": "onkos_user"
+    },
+    "pacientes": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('pacientes_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "nombre",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "dni",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "telefono",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "correo",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "fecha_nacimiento",
+          "data_type": "date",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "estado_vital",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": "'vivo'::text",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "fecha_registro",
+          "data_type": "timestamp without time zone",
+          "is_nullable": "YES",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "estado",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": "'activo'::text",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "tipo_documento",
+          "data_type": "character varying",
+          "is_nullable": "YES",
+          "column_default": "'DNI'::character varying",
+          "character_maximum_length": 20
+        },
+        {
+          "column_name": "numero_documento",
+          "data_type": "character varying",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": 20
+        }
+      ],
+      "recordCount": 36,
+      "constraints": [
+        {
+          "constraint_name": "pacientes_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        },
+        {
+          "constraint_name": "pacientes_dni_key",
+          "constraint_type": "UNIQUE",
+          "column_name": "dni"
+        }
+      ],
+      "owner": "onkos_user"
+    },
+    "permisos": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('permisos_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "nombre",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "descripcion",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 0,
+      "constraints": [
+        {
+          "constraint_name": "permisos_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        },
+        {
+          "constraint_name": "permisos_nombre_key",
+          "constraint_type": "UNIQUE",
+          "column_name": "nombre"
+        }
+      ],
+      "owner": "onkos_user"
+    },
+    "rol_permiso": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('rol_permiso_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "rol_id",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "permiso_id",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 0,
+      "constraints": [
+        {
+          "constraint_name": "rol_permiso_permiso_id_fkey",
+          "constraint_type": "FOREIGN KEY",
+          "column_name": "permiso_id"
+        },
+        {
+          "constraint_name": "rol_permiso_rol_id_fkey",
+          "constraint_type": "FOREIGN KEY",
+          "column_name": "rol_id"
+        },
+        {
+          "constraint_name": "rol_permiso_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        },
+        {
+          "constraint_name": "rol_permiso_rol_id_permiso_id_key",
+          "constraint_type": "UNIQUE",
+          "column_name": "permiso_id"
+        },
+        {
+          "constraint_name": "rol_permiso_rol_id_permiso_id_key",
+          "constraint_type": "UNIQUE",
+          "column_name": "rol_id"
+        }
+      ],
+      "owner": "onkos_user"
+    },
+    "roles": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('roles_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "nombre",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "descripcion",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 1,
+      "constraints": [
+        {
+          "constraint_name": "roles_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        },
+        {
+          "constraint_name": "roles_nombre_key",
+          "constraint_type": "UNIQUE",
+          "column_name": "nombre"
+        }
+      ],
+      "owner": "onkos_user"
+    },
+    "usuario_rol": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('usuario_rol_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "usuario_id",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "rol_id",
+          "data_type": "integer",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 1,
+      "constraints": [
+        {
+          "constraint_name": "usuario_rol_rol_id_fkey",
+          "constraint_type": "FOREIGN KEY",
+          "column_name": "rol_id"
+        },
+        {
+          "constraint_name": "usuario_rol_usuario_id_fkey",
+          "constraint_type": "FOREIGN KEY",
+          "column_name": "usuario_id"
+        },
+        {
+          "constraint_name": "usuario_rol_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        },
+        {
+          "constraint_name": "usuario_rol_usuario_id_rol_id_key",
+          "constraint_type": "UNIQUE",
+          "column_name": "rol_id"
+        },
+        {
+          "constraint_name": "usuario_rol_usuario_id_rol_id_key",
+          "constraint_type": "UNIQUE",
+          "column_name": "usuario_id"
+        }
+      ],
+      "owner": "onkos_user"
+    },
+    "usuarios": {
+      "structure": [
+        {
+          "column_name": "id",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "nextval('usuarios_id_seq'::regclass)",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "nombre",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "correo",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "contraseña",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "estado",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": "'activo'::text",
+          "character_maximum_length": null
+        },
+        {
+          "column_name": "fecha_creacion",
+          "data_type": "timestamp without time zone",
+          "is_nullable": "YES",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null
+        }
+      ],
+      "recordCount": 1,
+      "constraints": [
+        {
+          "constraint_name": "usuarios_pkey",
+          "constraint_type": "PRIMARY KEY",
+          "column_name": "id"
+        },
+        {
+          "constraint_name": "usuarios_correo_key",
+          "constraint_type": "UNIQUE",
+          "column_name": "correo"
+        }
+      ],
+      "owner": "onkos_user"
+    }
+  },
+  "differences": {
+    "categorias": {
+      "type": "count_difference",
+      "localCount": 15,
+      "prodCount": 19,
+      "difference": 4,
+      "message": "Diferencia en conteo: LOCAL=15, PROD=19"
+    },
+    "citas": {
+      "type": "count_difference",
+      "localCount": 22,
+      "prodCount": 21,
+      "difference": 1,
+      "message": "Diferencia en conteo: LOCAL=22, PROD=21"
+    },
+    "entradas": {
+      "type": "count_difference",
+      "localCount": 56,
+      "prodCount": 51,
+      "difference": 5,
+      "message": "Diferencia en conteo: LOCAL=56, PROD=51"
+    },
+    "pacientes": {
+      "type": "count_difference",
+      "localCount": 38,
+      "prodCount": 36,
+      "difference": 2,
+      "message": "Diferencia en conteo: LOCAL=38, PROD=36"
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "MEDIUM",
+      "action": "investigate_data_differences",
+      "tables": [
+        "categorias",
+        "citas",
+        "entradas",
+        "pacientes"
+      ],
+      "description": "Investigar diferencias en datos existentes"
+    }
+  ]
+}

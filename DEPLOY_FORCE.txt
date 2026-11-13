@@ -1,0 +1,21 @@
+DEPLOY FORZADO - COMMIT 74009ec
+Fecha: $(date)
+Branch: mejoras
+Descripción: Eliminación completa de fecha_nacimiento del flujo del chatbot
+
+CAMBIOS REALIZADOS:
+- Eliminada función validarFechaNacimientoConIA
+- Eliminado fecha_nacimiento de opciones de corrección  
+- Eliminado fecha_nacimiento de datos del paciente
+- Eliminado fecha_nacimiento de sessionMemory
+- Flujo ahora va directo de contacto a especialidad
+
+VERIFICACIÓN:
+- Commit local: 74009ec
+- Sin referencias a fecha_nacimiento en el código
+- Flujo: contacto → especialidad (sin fecha_nacimiento)
+
+FORZAR DEPLOY EN RENDER:
+1. Ve a onkosweb (frontend)
+2. Haz Manual Deploy
+3. Verifica que use commit 74009ec

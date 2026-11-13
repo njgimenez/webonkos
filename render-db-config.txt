@@ -1,0 +1,7 @@
+# Configuración de Base de Datos Render.com
+RENDER_HOST=dpg-d2rnp815pdvs73e0eisg-a
+RENDER_PORT=5432
+RENDER_DB_NAME=onkosdb
+RENDER_USER=onkos_user
+RENDER_PASSWORD=SCef59zkV9OEYV1zSGXla0wDUA3wUVSA
+RENDER_DATABASE_URL=postgresql://onkos_user:SCef59zkV9OEYV1zSGXla0wDUA3wUVSA@dpg-d2rnp815pdvs73e0eisg-a:5432/onkosdb

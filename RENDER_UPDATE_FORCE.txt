@@ -1,0 +1,24 @@
+FORZAR ACTUALIZACIÓN RENDER - COMMIT c8039bd
+===============================================
+
+FECHA: $(date)
+COMMIT: c8039bd
+BRANCH: mejoras
+DESCRIPCIÓN: Eliminación completa de fecha_nacimiento del chatbot
+
+PROBLEMA:
+- Render sigue mostrando "¿Cuál es tu fecha de nacimiento?"
+- El código local NO tiene fecha_nacimiento
+- Deploy completado pero Render no actualiza
+
+SOLUCIÓN:
+1. Verificar que Render use commit c8039bd
+2. Si no, hacer Manual Deploy
+3. Verificar que el chatbot NO pida fecha_nacimiento
+
+VERIFICACIÓN:
+- Commit local: c8039bd
+- Sin referencias a fecha_nacimiento en el código
+- Flujo: contacto → especialidad (sin fecha_nacimiento)
+
+ESTADO: PENDIENTE DE VERIFICACIÓN EN RENDER

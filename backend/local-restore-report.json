@@ -1,0 +1,370 @@
+{
+  "timestamp": "2025-09-15T22:58:14.192Z",
+  "restoreType": "LOCAL_TO_ORIGINAL_STATE",
+  "backupUsed": "/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/backups/backup-2025-09-15T20-41-35-377Z",
+  "verification": {
+    "counts": {
+      "categorias": 2,
+      "entradas": 51,
+      "pacientes": 38,
+      "media": 96,
+      "citas": 17
+    },
+    "matches": 2,
+    "differences": 3
+  },
+  "summary": {
+    "success": false,
+    "tablesRestored": 5,
+    "matches": 2,
+    "differences": 3
+  },
+  "logs": [
+    "[2025-09-15T22:58:13.310Z] [INFO] 🚀 Iniciando restauración de LOCAL a estado original...",
+    "[2025-09-15T22:58:13.313Z] [INFO] 🔌 Conectando a base de datos LOCAL...",
+    "[2025-09-15T22:58:13.359Z] [INFO] ✅ LOCAL conectado",
+    "[2025-09-15T22:58:13.360Z] [INFO] 🔄 Restaurando base de datos LOCAL...",
+    "[2025-09-15T22:58:13.360Z] [INFO] 📄 Cargando datos originales desde respaldo...",
+    "[2025-09-15T22:58:13.362Z] [INFO] 📊 Datos originales cargados: 17 tablas",
+    "[2025-09-15T22:58:13.362Z] [INFO] 🔄 Procesando tabla: categorias",
+    "[2025-09-15T22:58:13.394Z] [INFO] ✅ Tabla categorias limpiada",
+    "[2025-09-15T22:58:13.403Z] [INFO] 📋 Tabla categorias: 12 columnas disponibles",
+    "[2025-09-15T22:58:13.407Z] [ERROR] Error insertando registro en categorias: insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"",
+    "[2025-09-15T22:58:13.409Z] [ERROR] Error insertando registro en categorias: insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"",
+    "[2025-09-15T22:58:13.412Z] [ERROR] Error insertando registro en categorias: insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"",
+    "[2025-09-15T22:58:13.413Z] [ERROR] Error insertando registro en categorias: insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"",
+    "[2025-09-15T22:58:13.416Z] [ERROR] Error insertando registro en categorias: insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"",
+    "[2025-09-15T22:58:13.417Z] [ERROR] Error insertando registro en categorias: insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"",
+    "[2025-09-15T22:58:13.419Z] [ERROR] Error insertando registro en categorias: insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"",
+    "[2025-09-15T22:58:13.421Z] [ERROR] Error insertando registro en categorias: insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"",
+    "[2025-09-15T22:58:13.422Z] [ERROR] Error insertando registro en categorias: insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"",
+    "[2025-09-15T22:58:13.426Z] [ERROR] Error insertando registro en categorias: insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"",
+    "[2025-09-15T22:58:13.426Z] [ERROR] Error insertando registro en categorias: insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"",
+    "[2025-09-15T22:58:13.427Z] [ERROR] Error insertando registro en categorias: insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"",
+    "[2025-09-15T22:58:13.428Z] [ERROR] Error insertando registro en categorias: insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"",
+    "[2025-09-15T22:58:13.432Z] [INFO] ✅ categorias: 2 registros restaurados, 13 omitidos",
+    "[2025-09-15T22:58:13.432Z] [INFO] 🔄 Procesando tabla: especialidades",
+    "[2025-09-15T22:58:13.434Z] [ERROR] Error limpiando tabla especialidades: update or delete on table \"especialidades\" violates foreign key constraint \"medicos_especialidad_id_fkey\" on table \"medicos\"",
+    "[2025-09-15T22:58:13.459Z] [INFO] 📋 Tabla especialidades: 2 columnas disponibles",
+    "[2025-09-15T22:58:13.467Z] [INFO] ✅ especialidades: 4 registros restaurados, 0 omitidos",
+    "[2025-09-15T22:58:13.467Z] [INFO] 🔄 Procesando tabla: medicos",
+    "[2025-09-15T22:58:13.470Z] [ERROR] Error limpiando tabla medicos: update or delete on table \"medicos\" violates foreign key constraint \"citas_medico_id_fkey\" on table \"citas\"",
+    "[2025-09-15T22:58:13.489Z] [INFO] 📋 Tabla medicos: 8 columnas disponibles",
+    "[2025-09-15T22:58:13.500Z] [INFO] ✅ medicos: 4 registros restaurados, 0 omitidos",
+    "[2025-09-15T22:58:13.500Z] [INFO] 🔄 Procesando tabla: pacientes",
+    "[2025-09-15T22:58:13.503Z] [ERROR] Error limpiando tabla pacientes: update or delete on table \"pacientes\" violates foreign key constraint \"citas_paciente_id_fkey\" on table \"citas\"",
+    "[2025-09-15T22:58:13.529Z] [INFO] 📋 Tabla pacientes: 11 columnas disponibles",
+    "[2025-09-15T22:58:13.551Z] [INFO] ✅ pacientes: 11 registros restaurados, 0 omitidos",
+    "[2025-09-15T22:58:13.552Z] [INFO] 🔄 Procesando tabla: media",
+    "[2025-09-15T22:58:13.562Z] [INFO] ✅ Tabla media limpiada",
+    "[2025-09-15T22:58:13.567Z] [INFO] 📋 Tabla media: 9 columnas disponibles",
+    "[2025-09-15T22:58:13.797Z] [INFO] ✅ media: 96 registros restaurados, 0 omitidos",
+    "[2025-09-15T22:58:13.798Z] [INFO] 🔄 Procesando tabla: entradas",
+    "[2025-09-15T22:58:13.804Z] [INFO] ✅ Tabla entradas limpiada",
+    "[2025-09-15T22:58:13.812Z] [INFO] 📋 Tabla entradas: 19 columnas disponibles",
+    "[2025-09-15T22:58:13.821Z] [ERROR] Error insertando registro en entradas: invalid input syntax for type json",
+    "[2025-09-15T22:58:13.871Z] [ERROR] Error insertando registro en entradas: invalid input syntax for type json",
+    "[2025-09-15T22:58:13.879Z] [ERROR] Error insertando registro en entradas: invalid input syntax for type json",
+    "[2025-09-15T22:58:13.880Z] [ERROR] Error insertando registro en entradas: invalid input syntax for type json",
+    "[2025-09-15T22:58:13.916Z] [ERROR] Error insertando registro en entradas: invalid input syntax for type json",
+    "[2025-09-15T22:58:13.981Z] [INFO] ✅ entradas: 51 registros restaurados, 5 omitidos",
+    "[2025-09-15T22:58:13.981Z] [INFO] 🔄 Procesando tabla: citas",
+    "[2025-09-15T22:58:13.988Z] [INFO] ✅ Tabla citas limpiada",
+    "[2025-09-15T22:58:13.993Z] [INFO] 📋 Tabla citas: 9 columnas disponibles",
+    "[2025-09-15T22:58:14.025Z] [INFO] ✅ citas: 17 registros restaurados, 0 omitidos",
+    "[2025-09-15T22:58:14.026Z] [INFO] 🔄 Procesando tabla: entrada_categorias",
+    "[2025-09-15T22:58:14.028Z] [INFO] ✅ Tabla entrada_categorias limpiada",
+    "[2025-09-15T22:58:14.033Z] [INFO] 📋 Tabla entrada_categorias: 4 columnas disponibles",
+    "[2025-09-15T22:58:14.035Z] [ERROR] Error insertando registro en entrada_categorias: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+    "[2025-09-15T22:58:14.040Z] [ERROR] Error insertando registro en entrada_categorias: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+    "[2025-09-15T22:58:14.041Z] [ERROR] Error insertando registro en entrada_categorias: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+    "[2025-09-15T22:58:14.044Z] [ERROR] Error insertando registro en entrada_categorias: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+    "[2025-09-15T22:58:14.045Z] [ERROR] Error insertando registro en entrada_categorias: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+    "[2025-09-15T22:58:14.047Z] [ERROR] Error insertando registro en entrada_categorias: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+    "[2025-09-15T22:58:14.048Z] [ERROR] Error insertando registro en entrada_categorias: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+    "[2025-09-15T22:58:14.051Z] [ERROR] Error insertando registro en entrada_categorias: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+    "[2025-09-15T22:58:14.054Z] [ERROR] Error insertando registro en entrada_categorias: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+    "[2025-09-15T22:58:14.056Z] [ERROR] Error insertando registro en entrada_categorias: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+    "[2025-09-15T22:58:14.058Z] [ERROR] Error insertando registro en entrada_categorias: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+    "[2025-09-15T22:58:14.058Z] [ERROR] Error insertando registro en entrada_categorias: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+    "[2025-09-15T22:58:14.060Z] [ERROR] Error insertando registro en entrada_categorias: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+    "[2025-09-15T22:58:14.061Z] [ERROR] Error insertando registro en entrada_categorias: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+    "[2025-09-15T22:58:14.066Z] [ERROR] Error insertando registro en entrada_categorias: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+    "[2025-09-15T22:58:14.067Z] [ERROR] Error insertando registro en entrada_categorias: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+    "[2025-09-15T22:58:14.069Z] [ERROR] Error insertando registro en entrada_categorias: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+    "[2025-09-15T22:58:14.071Z] [ERROR] Error insertando registro en entrada_categorias: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+    "[2025-09-15T22:58:14.073Z] [ERROR] Error insertando registro en entrada_categorias: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+    "[2025-09-15T22:58:14.076Z] [ERROR] Error insertando registro en entrada_categorias: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+    "[2025-09-15T22:58:14.080Z] [ERROR] Error insertando registro en entrada_categorias: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+    "[2025-09-15T22:58:14.083Z] [ERROR] Error insertando registro en entrada_categorias: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+    "[2025-09-15T22:58:14.084Z] [ERROR] Error insertando registro en entrada_categorias: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+    "[2025-09-15T22:58:14.084Z] [INFO] ✅ entrada_categorias: 3 registros restaurados, 23 omitidos",
+    "[2025-09-15T22:58:14.084Z] [INFO] 🔄 Procesando tabla: menu_items",
+    "[2025-09-15T22:58:14.091Z] [INFO] ✅ Tabla menu_items limpiada",
+    "[2025-09-15T22:58:14.098Z] [INFO] 📋 Tabla menu_items: 10 columnas disponibles",
+    "[2025-09-15T22:58:14.114Z] [INFO] ✅ menu_items: 4 registros restaurados, 0 omitidos",
+    "[2025-09-15T22:58:14.114Z] [INFO] 🔄 Procesando tabla: roles",
+    "[2025-09-15T22:58:14.123Z] [INFO] ✅ Tabla roles limpiada",
+    "[2025-09-15T22:58:14.129Z] [INFO] 📋 Tabla roles: 3 columnas disponibles",
+    "[2025-09-15T22:58:14.134Z] [INFO] ✅ roles: 1 registros restaurados, 0 omitidos",
+    "[2025-09-15T22:58:14.134Z] [INFO] 🔄 Procesando tabla: usuarios",
+    "[2025-09-15T22:58:14.140Z] [INFO] ✅ Tabla usuarios limpiada",
+    "[2025-09-15T22:58:14.147Z] [INFO] 📋 Tabla usuarios: 6 columnas disponibles",
+    "[2025-09-15T22:58:14.149Z] [INFO] ✅ usuarios: 1 registros restaurados, 0 omitidos",
+    "[2025-09-15T22:58:14.149Z] [INFO] 🔄 Procesando tabla: usuario_rol",
+    "[2025-09-15T22:58:14.152Z] [INFO] ✅ Tabla usuario_rol limpiada",
+    "[2025-09-15T22:58:14.156Z] [INFO] 📋 Tabla usuario_rol: 3 columnas disponibles",
+    "[2025-09-15T22:58:14.159Z] [INFO] ✅ usuario_rol: 1 registros restaurados, 0 omitidos",
+    "[2025-09-15T22:58:14.159Z] [INFO] 🔄 Procesando tabla: permisos",
+    "[2025-09-15T22:58:14.163Z] [INFO] ✅ Tabla permisos limpiada",
+    "[2025-09-15T22:58:14.163Z] [INFO] ⚠️ Tabla permisos sin datos, omitiendo",
+    "[2025-09-15T22:58:14.163Z] [INFO] 🔄 Procesando tabla: rol_permiso",
+    "[2025-09-15T22:58:14.168Z] [INFO] ✅ Tabla rol_permiso limpiada",
+    "[2025-09-15T22:58:14.168Z] [INFO] ⚠️ Tabla rol_permiso sin datos, omitiendo",
+    "[2025-09-15T22:58:14.169Z] [INFO] 🔄 Procesando tabla: centro_medico",
+    "[2025-09-15T22:58:14.171Z] [INFO] ✅ Tabla centro_medico limpiada",
+    "[2025-09-15T22:58:14.171Z] [INFO] ⚠️ Tabla centro_medico sin datos, omitiendo",
+    "[2025-09-15T22:58:14.171Z] [INFO] 🔄 Procesando tabla: historial_citas",
+    "[2025-09-15T22:58:14.178Z] [INFO] ✅ Tabla historial_citas limpiada",
+    "[2025-09-15T22:58:14.178Z] [INFO] ⚠️ Tabla historial_citas sin datos, omitiendo",
+    "[2025-09-15T22:58:14.178Z] [INFO] 🔄 Procesando tabla: horarios_medicos",
+    "[2025-09-15T22:58:14.180Z] [INFO] ✅ Tabla horarios_medicos limpiada",
+    "[2025-09-15T22:58:14.180Z] [INFO] ⚠️ Tabla horarios_medicos sin datos, omitiendo",
+    "[2025-09-15T22:58:14.180Z] [INFO] ✅ Restauración de base de datos LOCAL completada",
+    "[2025-09-15T22:58:14.180Z] [INFO] 🔍 Verificando restauración...",
+    "[2025-09-15T22:58:14.181Z] [INFO] 📊 categorias: 2 registros",
+    "[2025-09-15T22:58:14.188Z] [INFO] 📊 entradas: 51 registros",
+    "[2025-09-15T22:58:14.191Z] [INFO] 📊 pacientes: 38 registros",
+    "[2025-09-15T22:58:14.191Z] [INFO] 📊 media: 96 registros",
+    "[2025-09-15T22:58:14.192Z] [INFO] 📊 citas: 17 registros",
+    "[2025-09-15T22:58:14.192Z] [WARNING] ⚠️ categorias: 2 (esperado: 15)",
+    "[2025-09-15T22:58:14.192Z] [WARNING] ⚠️ entradas: 51 (esperado: 56)",
+    "[2025-09-15T22:58:14.192Z] [WARNING] ⚠️ pacientes: 38 (esperado: 11)",
+    "[2025-09-15T22:58:14.192Z] [INFO] ✅ media: 96 (esperado: 96)",
+    "[2025-09-15T22:58:14.192Z] [INFO] ✅ citas: 17 (esperado: 17)",
+    "[2025-09-15T22:58:14.192Z] [INFO] 📊 Verificación: 2 coincidencias, 3 diferencias",
+    "[2025-09-15T22:58:14.192Z] [INFO] ✅ Restauración completada en 879ms"
+  ],
+  "errors": [
+    {
+      "error": "insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"",
+      "context": "Error insertando registro en categorias",
+      "stack": "error: insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"",
+      "context": "Error insertando registro en categorias",
+      "stack": "error: insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"",
+      "context": "Error insertando registro en categorias",
+      "stack": "error: insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"",
+      "context": "Error insertando registro en categorias",
+      "stack": "error: insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"",
+      "context": "Error insertando registro en categorias",
+      "stack": "error: insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"",
+      "context": "Error insertando registro en categorias",
+      "stack": "error: insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"",
+      "context": "Error insertando registro en categorias",
+      "stack": "error: insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"",
+      "context": "Error insertando registro en categorias",
+      "stack": "error: insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"",
+      "context": "Error insertando registro en categorias",
+      "stack": "error: insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"",
+      "context": "Error insertando registro en categorias",
+      "stack": "error: insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"",
+      "context": "Error insertando registro en categorias",
+      "stack": "error: insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"",
+      "context": "Error insertando registro en categorias",
+      "stack": "error: insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"",
+      "context": "Error insertando registro en categorias",
+      "stack": "error: insert or update on table \"categorias\" violates foreign key constraint \"categorias_parent_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "update or delete on table \"especialidades\" violates foreign key constraint \"medicos_especialidad_id_fkey\" on table \"medicos\"",
+      "context": "Error limpiando tabla especialidades",
+      "stack": "error: update or delete on table \"especialidades\" violates foreign key constraint \"medicos_especialidad_id_fkey\" on table \"medicos\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.clearTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:90:7)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:209:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "update or delete on table \"medicos\" violates foreign key constraint \"citas_medico_id_fkey\" on table \"citas\"",
+      "context": "Error limpiando tabla medicos",
+      "stack": "error: update or delete on table \"medicos\" violates foreign key constraint \"citas_medico_id_fkey\" on table \"citas\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.clearTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:90:7)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:209:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "update or delete on table \"pacientes\" violates foreign key constraint \"citas_paciente_id_fkey\" on table \"citas\"",
+      "context": "Error limpiando tabla pacientes",
+      "stack": "error: update or delete on table \"pacientes\" violates foreign key constraint \"citas_paciente_id_fkey\" on table \"citas\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.clearTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:90:7)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:209:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "invalid input syntax for type json",
+      "context": "Error insertando registro en entradas",
+      "stack": "error: invalid input syntax for type json\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "invalid input syntax for type json",
+      "context": "Error insertando registro en entradas",
+      "stack": "error: invalid input syntax for type json\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "invalid input syntax for type json",
+      "context": "Error insertando registro en entradas",
+      "stack": "error: invalid input syntax for type json\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "invalid input syntax for type json",
+      "context": "Error insertando registro en entradas",
+      "stack": "error: invalid input syntax for type json\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "invalid input syntax for type json",
+      "context": "Error insertando registro en entradas",
+      "stack": "error: invalid input syntax for type json\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+      "context": "Error insertando registro en entrada_categorias",
+      "stack": "error: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+      "context": "Error insertando registro en entrada_categorias",
+      "stack": "error: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+      "context": "Error insertando registro en entrada_categorias",
+      "stack": "error: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+      "context": "Error insertando registro en entrada_categorias",
+      "stack": "error: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+      "context": "Error insertando registro en entrada_categorias",
+      "stack": "error: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+      "context": "Error insertando registro en entrada_categorias",
+      "stack": "error: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+      "context": "Error insertando registro en entrada_categorias",
+      "stack": "error: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+      "context": "Error insertando registro en entrada_categorias",
+      "stack": "error: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+      "context": "Error insertando registro en entrada_categorias",
+      "stack": "error: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+      "context": "Error insertando registro en entrada_categorias",
+      "stack": "error: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+      "context": "Error insertando registro en entrada_categorias",
+      "stack": "error: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+      "context": "Error insertando registro en entrada_categorias",
+      "stack": "error: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+      "context": "Error insertando registro en entrada_categorias",
+      "stack": "error: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+      "context": "Error insertando registro en entrada_categorias",
+      "stack": "error: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+      "context": "Error insertando registro en entrada_categorias",
+      "stack": "error: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+      "context": "Error insertando registro en entrada_categorias",
+      "stack": "error: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+      "context": "Error insertando registro en entrada_categorias",
+      "stack": "error: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+      "context": "Error insertando registro en entrada_categorias",
+      "stack": "error: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+      "context": "Error insertando registro en entrada_categorias",
+      "stack": "error: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+      "context": "Error insertando registro en entrada_categorias",
+      "stack": "error: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+      "context": "Error insertando registro en entrada_categorias",
+      "stack": "error: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+      "context": "Error insertando registro en entrada_categorias",
+      "stack": "error: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    },
+    {
+      "error": "insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"",
+      "context": "Error insertando registro en entrada_categorias",
+      "stack": "error: insert or update on table \"entrada_categorias\" violates foreign key constraint \"entrada_categorias_categoria_id_fkey\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LocalRestore.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:158:11)\n    at async LocalRestore.restoreLocalDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:212:11)\n    at async LocalRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-local-database.js:321:7)"
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+🤖 FLUJO DEL CHATBOT LUCIA - ONKOS INSTITUTO DEL CÁNCER
+
+┌─────────────────────────────────────────────────────────────────┐
+│                        INICIO DEL SISTEMA                      │
+└─────────────────────┬───────────────────────────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ 1. USUARIO ABRE LA PÁGINA                                      │
+│    • ChatBot.vue se monta                                      │
+│    • Mensaje de bienvenida: "Hola, soy LucIA..."              │
+│    • Botón flotante visible en esquina inferior derecha       │
+└─────────────────────┬───────────────────────────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ 2. USUARIO HACE CLICK EN CHAT                                  │
+│    • Ventana de chat se abre                                   │
+│    • Input se enfoca automáticamente                           │
+│    • Historial de conversación se inicializa                  │
+└─────────────────────┬───────────────────────────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ 3. USUARIO ESCRIBE MENSAJE                                     │
+│    • Frontend valida que no esté vacío                         │
+│    • Deshabilita input mientras procesa                        │
+│    • Muestra mensaje del usuario en la interfaz               │
+└─────────────────────┬───────────────────────────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ 4. ENVÍO AL BACKEND                                            │
+│    POST /api/chat                                              │
+│    • message: texto del usuario                                │
+│    • conversationHistory: últimos 10 mensajes                 │
+└─────────────────────┬───────────────────────────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ 5. PROCESAMIENTO EN BACKEND                                    │
+│    • Construye prompt del sistema con contexto                 │
+│    • Agrega historial de conversación                          │
+│    • Prepara mensaje para Groq AI                              │
+└─────────────────────┬───────────────────────────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ 6. LLAMADA A GROQ AI                                           │
+│    Modelo: moonshotai/kimi-k2-instruct                         │
+│    • Temperature: 0.7                                          │
+│    • Max tokens: 1000                                          │
+│    • Contexto completo de la conversación                      │
+└─────────────────────┬───────────────────────────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ 7. RESPUESTA DE IA                                             │
+│    • Si Groq funciona: Respuesta generada por IA               │
+│    • Si falla: Respuesta predefinida de getChatbotResponse()   │
+│    • Logs de la interacción                                     │
+└─────────────────────┬───────────────────────────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ 8. PROCESAMIENTO DE RESPUESTA                                  │
+│    • Frontend recibe respuesta                                 │
+│    • Calcula tiempo de escritura (40 palabras/min)             │
+│    • Divide mensajes largos en múltiples partes                │
+│    • Agrega al historial de conversación                       │
+└─────────────────────┬───────────────────────────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ 9. SIMULACIÓN DE ESCRITURA                                     │
+│    • Muestra "LucIA está escribiendo..."                       │
+│    • Espera tiempo calculado                                   │
+│    • Muestra mensaje parte por parte                           │
+│    • Pausa entre mensajes múltiples                            │
+└─────────────────────┬───────────────────────────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ 10. PRESENTACIÓN AL USUARIO                                    │
+│     • Mensaje aparece en la interfaz                           │
+│     • Scroll automático al final                               │
+│     • Input se rehabilita y enfoca                             │
+│     • Notificación si chat está cerrado                        │
+└─────────────────────┬───────────────────────────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                    CICLO CONTINÚA                              │
+│              (Vuelve al paso 3)                                │
+└─────────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════
+
+🎯 FLUJO ESPECIAL: AGENDAMIENTO DE CITAS
+
+┌─────────────────────────────────────────────────────────────────┐
+│ DETECCIÓN DE INTENCIÓN                                         │
+│ Palabras clave: "agendar", "cita", "consulta", etc.            │
+└─────────────────────┬───────────────────────────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ PASO 1: NOMBRE                                                 │
+│ "¿Cuál es tu nombre completo?"                                 │
+└─────────────────────┬───────────────────────────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ PASO 2: DOCUMENTO                                              │
+│ "¿Tipo de documento y número?"                                 │
+│ • Validación con IA (DNI, CE, Pasaporte)                      │
+└─────────────────────┬───────────────────────────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ PASO 3: CONTACTO                                               │
+│ "¿Teléfono y correo electrónico?"                              │
+│ • Validación con IA (formato peruano, email)                  │
+└─────────────────────┬───────────────────────────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ PASO 4: VALIDACIÓN DE PACIENTE                                 │
+│ • Busca en base de datos PostgreSQL                            │
+│ • Si existe: continúa                                          │
+│ • Si no existe: solicita fecha de nacimiento                   │
+└─────────────────────┬───────────────────────────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ PASO 5: ESPECIALIDAD                                           │
+│ Lista de especialidades médicas disponibles                    │
+└─────────────────────┬───────────────────────────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ PASO 6: FECHA DE CITA                                          │
+│ "¿Para cuándo te gustaría la cita?"                            │
+│ • Interpretación natural de fechas con IA                      │
+└─────────────────────┬───────────────────────────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ PASO 7: HORA                                                   │
+│ "¿A qué hora prefieres?"                                       │
+│ • Verificación de disponibilidad                               │
+└─────────────────────┬───────────────────────────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ PASO 8: MOTIVO                                                 │
+│ "¿En qué podemos ayudarte?"                                    │
+└─────────────────────┬───────────────────────────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ PASO 9: CONFIRMACIÓN                                           │
+│ • Muestra resumen de datos                                     │
+│ • Usuario confirma o modifica                                  │
+│ • Crea paciente y cita en PostgreSQL                           │
+└─────────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════
+
+🔧 COMPONENTES TÉCNICOS
+
+Frontend (Vue.js 3):
+├── ChatBot.vue (1,341 líneas)
+├── Interfaz flotante
+├── Gestión de estado
+├── Simulación de escritura
+└── Validaciones con IA
+
+Backend (Node.js + Express):
+├── /api/chat (endpoint principal)
+├── Groq AI integration
+├── Fallback responses
+├── PostgreSQL integration
+└── Endpoints de agendamiento
+
+Base de Datos (PostgreSQL):
+├── Tabla: pacientes
+├── Tabla: citas
+├── Tabla: médicos
+├── Tabla: especialidades
+└── Relaciones y validaciones
+
+IA (Groq):
+├── Modelo: moonshotai/kimi-k2-instruct
+├── Temperature: 0.7
+├── Max tokens: 1000
+├── Contexto: Historial de conversación
+└── Fallback: Respuestas predefinidas

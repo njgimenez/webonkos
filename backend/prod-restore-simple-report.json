@@ -1,0 +1,150 @@
+{
+  "timestamp": "2025-09-15T23:05:56.709Z",
+  "restoreType": "PROD_TO_ORIGINAL_STATE_SIMPLE",
+  "backupUsed": "/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/backups/backup-2025-09-15T20-41-35-377Z",
+  "verification": {
+    "counts": {
+      "categorias": 5,
+      "entradas": 44,
+      "pacientes": 36,
+      "media": 167,
+      "citas": 21
+    },
+    "matches": 4,
+    "differences": 1
+  },
+  "summary": {
+    "success": false,
+    "tablesRestored": 5,
+    "matches": 4,
+    "differences": 1
+  },
+  "logs": [
+    "[2025-09-15T23:04:53.110Z] [INFO] 🚀 Iniciando restauración simple de PROD a estado original...",
+    "[2025-09-15T23:04:53.113Z] [INFO] 🔌 Conectando a base de datos PROD...",
+    "[2025-09-15T23:04:54.387Z] [INFO] ✅ PROD conectado",
+    "[2025-09-15T23:04:54.388Z] [INFO] 🔄 Restaurando base de datos PROD...",
+    "[2025-09-15T23:04:54.388Z] [INFO] 📄 Cargando datos originales desde respaldo...",
+    "[2025-09-15T23:04:54.397Z] [INFO] 📊 Datos originales cargados: 16 tablas",
+    "[2025-09-15T23:04:54.397Z] [INFO] 🔄 Procesando tabla: categorias",
+    "[2025-09-15T23:04:54.729Z] [INFO] ✅ Tabla categorias limpiada",
+    "[2025-09-15T23:04:55.062Z] [INFO] 📋 Tabla categorias: 12 columnas disponibles",
+    "[2025-09-15T23:04:55.869Z] [INFO] ✅ categorias: 5 registros restaurados, 0 omitidos",
+    "[2025-09-15T23:04:55.869Z] [INFO] 🔄 Procesando tabla: especialidades",
+    "[2025-09-15T23:04:56.188Z] [ERROR] Error limpiando tabla especialidades: update or delete on table \"especialidades\" violates foreign key constraint \"medicos_especialidad_id_fkey\" on table \"medicos\"",
+    "[2025-09-15T23:04:57.504Z] [INFO] 📋 Tabla especialidades: 2 columnas disponibles",
+    "[2025-09-15T23:04:58.150Z] [INFO] ✅ especialidades: 4 registros restaurados, 0 omitidos",
+    "[2025-09-15T23:04:58.151Z] [INFO] 🔄 Procesando tabla: medicos",
+    "[2025-09-15T23:04:58.467Z] [ERROR] Error limpiando tabla medicos: update or delete on table \"medicos\" violates foreign key constraint \"citas_medico_id_fkey\" on table \"citas\"",
+    "[2025-09-15T23:05:00.438Z] [INFO] 📋 Tabla medicos: 8 columnas disponibles",
+    "[2025-09-15T23:05:01.239Z] [INFO] ✅ medicos: 4 registros restaurados, 0 omitidos",
+    "[2025-09-15T23:05:01.239Z] [INFO] 🔄 Procesando tabla: pacientes",
+    "[2025-09-15T23:05:01.630Z] [ERROR] Error limpiando tabla pacientes: update or delete on table \"pacientes\" violates foreign key constraint \"citas_paciente_id_fkey\" on table \"citas\"",
+    "[2025-09-15T23:05:02.879Z] [INFO] 📋 Tabla pacientes: 11 columnas disponibles",
+    "[2025-09-15T23:05:08.752Z] [INFO] ✅ pacientes: 36 registros restaurados, 0 omitidos",
+    "[2025-09-15T23:05:08.752Z] [INFO] 🔄 Procesando tabla: media",
+    "[2025-09-15T23:05:09.077Z] [INFO] ✅ Tabla media limpiada",
+    "[2025-09-15T23:05:09.412Z] [INFO] 📋 Tabla media: 9 columnas disponibles",
+    "[2025-09-15T23:05:36.966Z] [INFO] ✅ media: 167 registros restaurados, 0 omitidos",
+    "[2025-09-15T23:05:36.966Z] [INFO] 🔄 Procesando tabla: entradas",
+    "[2025-09-15T23:05:37.287Z] [INFO] ✅ Tabla entradas limpiada",
+    "[2025-09-15T23:05:37.616Z] [INFO] 📋 Tabla entradas: 19 columnas disponibles",
+    "[2025-09-15T23:05:37.775Z] [ERROR] Error insertando registro en entradas: invalid input syntax for type json",
+    "[2025-09-15T23:05:37.936Z] [ERROR] Error insertando registro en entradas: invalid input syntax for type json",
+    "[2025-09-15T23:05:38.579Z] [ERROR] Error insertando registro en entradas: invalid input syntax for type json",
+    "[2025-09-15T23:05:39.302Z] [ERROR] Error insertando registro en entradas: invalid input syntax for type json",
+    "[2025-09-15T23:05:41.995Z] [ERROR] Error insertando registro en entradas: invalid input syntax for type json",
+    "[2025-09-15T23:05:46.409Z] [INFO] ✅ entradas: 44 registros restaurados, 5 omitidos",
+    "[2025-09-15T23:05:46.410Z] [INFO] 🔄 Procesando tabla: citas",
+    "[2025-09-15T23:05:46.737Z] [INFO] ✅ Tabla citas limpiada",
+    "[2025-09-15T23:05:47.065Z] [INFO] 📋 Tabla citas: 9 columnas disponibles",
+    "[2025-09-15T23:05:50.528Z] [INFO] ✅ citas: 21 registros restaurados, 0 omitidos",
+    "[2025-09-15T23:05:50.529Z] [INFO] 🔄 Procesando tabla: menu_items",
+    "[2025-09-15T23:05:50.868Z] [INFO] ✅ Tabla menu_items limpiada",
+    "[2025-09-15T23:05:51.196Z] [INFO] 📋 Tabla menu_items: 10 columnas disponibles",
+    "[2025-09-15T23:05:51.832Z] [INFO] ✅ menu_items: 4 registros restaurados, 0 omitidos",
+    "[2025-09-15T23:05:51.832Z] [INFO] 🔄 Procesando tabla: roles",
+    "[2025-09-15T23:05:52.152Z] [INFO] ✅ Tabla roles limpiada",
+    "[2025-09-15T23:05:52.473Z] [INFO] 📋 Tabla roles: 3 columnas disponibles",
+    "[2025-09-15T23:05:52.646Z] [INFO] ✅ roles: 1 registros restaurados, 0 omitidos",
+    "[2025-09-15T23:05:52.646Z] [INFO] 🔄 Procesando tabla: usuarios",
+    "[2025-09-15T23:05:52.961Z] [INFO] ✅ Tabla usuarios limpiada",
+    "[2025-09-15T23:05:53.279Z] [INFO] 📋 Tabla usuarios: 6 columnas disponibles",
+    "[2025-09-15T23:05:53.437Z] [INFO] ✅ usuarios: 1 registros restaurados, 0 omitidos",
+    "[2025-09-15T23:05:53.437Z] [INFO] 🔄 Procesando tabla: usuario_rol",
+    "[2025-09-15T23:05:53.759Z] [INFO] ✅ Tabla usuario_rol limpiada",
+    "[2025-09-15T23:05:54.074Z] [INFO] 📋 Tabla usuario_rol: 3 columnas disponibles",
+    "[2025-09-15T23:05:54.244Z] [INFO] ✅ usuario_rol: 1 registros restaurados, 0 omitidos",
+    "[2025-09-15T23:05:54.244Z] [INFO] 🔄 Procesando tabla: permisos",
+    "[2025-09-15T23:05:54.558Z] [INFO] ✅ Tabla permisos limpiada",
+    "[2025-09-15T23:05:54.558Z] [INFO] ⚠️ Tabla permisos sin datos, omitiendo",
+    "[2025-09-15T23:05:54.558Z] [INFO] 🔄 Procesando tabla: rol_permiso",
+    "[2025-09-15T23:05:54.874Z] [INFO] ✅ Tabla rol_permiso limpiada",
+    "[2025-09-15T23:05:54.875Z] [INFO] ⚠️ Tabla rol_permiso sin datos, omitiendo",
+    "[2025-09-15T23:05:54.875Z] [INFO] 🔄 Procesando tabla: centro_medico",
+    "[2025-09-15T23:05:55.191Z] [INFO] ✅ Tabla centro_medico limpiada",
+    "[2025-09-15T23:05:55.192Z] [INFO] ⚠️ Tabla centro_medico sin datos, omitiendo",
+    "[2025-09-15T23:05:55.193Z] [INFO] 🔄 Procesando tabla: historial_citas",
+    "[2025-09-15T23:05:55.512Z] [INFO] ✅ Tabla historial_citas limpiada",
+    "[2025-09-15T23:05:55.513Z] [INFO] ⚠️ Tabla historial_citas sin datos, omitiendo",
+    "[2025-09-15T23:05:55.513Z] [INFO] 🔄 Procesando tabla: horarios_medicos",
+    "[2025-09-15T23:05:55.836Z] [INFO] ✅ Tabla horarios_medicos limpiada",
+    "[2025-09-15T23:05:55.836Z] [INFO] ⚠️ Tabla horarios_medicos sin datos, omitiendo",
+    "[2025-09-15T23:05:55.836Z] [INFO] ✅ Restauración de base de datos PROD completada",
+    "[2025-09-15T23:05:55.839Z] [INFO] 🔍 Verificando restauración...",
+    "[2025-09-15T23:05:56.005Z] [INFO] 📊 categorias: 5 registros",
+    "[2025-09-15T23:05:56.169Z] [INFO] 📊 entradas: 44 registros",
+    "[2025-09-15T23:05:56.327Z] [INFO] 📊 pacientes: 36 registros",
+    "[2025-09-15T23:05:56.498Z] [INFO] 📊 media: 167 registros",
+    "[2025-09-15T23:05:56.690Z] [INFO] 📊 citas: 21 registros",
+    "[2025-09-15T23:05:56.691Z] [INFO] ✅ categorias: 5 (esperado: 5)",
+    "[2025-09-15T23:05:56.699Z] [WARNING] ⚠️ entradas: 44 (esperado: 49)",
+    "[2025-09-15T23:05:56.700Z] [INFO] ✅ pacientes: 36 (esperado: 36)",
+    "[2025-09-15T23:05:56.701Z] [INFO] ✅ media: 167 (esperado: 167)",
+    "[2025-09-15T23:05:56.705Z] [INFO] ✅ citas: 21 (esperado: 21)",
+    "[2025-09-15T23:05:56.705Z] [INFO] 📊 Verificación: 4 coincidencias, 1 diferencias",
+    "[2025-09-15T23:05:56.706Z] [INFO] ✅ Restauración completada en 63593ms"
+  ],
+  "errors": [
+    {
+      "error": "update or delete on table \"especialidades\" violates foreign key constraint \"medicos_especialidad_id_fkey\" on table \"medicos\"",
+      "context": "Error limpiando tabla especialidades",
+      "stack": "error: update or delete on table \"especialidades\" violates foreign key constraint \"medicos_especialidad_id_fkey\" on table \"medicos\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdRestoreSimple.clearTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-prod-simple.js:87:7)\n    at async ProdRestoreSimple.restoreProdDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-prod-simple.js:206:11)\n    at async ProdRestoreSimple.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-prod-simple.js:318:7)"
+    },
+    {
+      "error": "update or delete on table \"medicos\" violates foreign key constraint \"citas_medico_id_fkey\" on table \"citas\"",
+      "context": "Error limpiando tabla medicos",
+      "stack": "error: update or delete on table \"medicos\" violates foreign key constraint \"citas_medico_id_fkey\" on table \"citas\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdRestoreSimple.clearTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-prod-simple.js:87:7)\n    at async ProdRestoreSimple.restoreProdDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-prod-simple.js:206:11)\n    at async ProdRestoreSimple.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-prod-simple.js:318:7)"
+    },
+    {
+      "error": "update or delete on table \"pacientes\" violates foreign key constraint \"citas_paciente_id_fkey\" on table \"citas\"",
+      "context": "Error limpiando tabla pacientes",
+      "stack": "error: update or delete on table \"pacientes\" violates foreign key constraint \"citas_paciente_id_fkey\" on table \"citas\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdRestoreSimple.clearTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-prod-simple.js:87:7)\n    at async ProdRestoreSimple.restoreProdDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-prod-simple.js:206:11)\n    at async ProdRestoreSimple.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-prod-simple.js:318:7)"
+    },
+    {
+      "error": "invalid input syntax for type json",
+      "context": "Error insertando registro en entradas",
+      "stack": "error: invalid input syntax for type json\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdRestoreSimple.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-prod-simple.js:155:11)\n    at async ProdRestoreSimple.restoreProdDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-prod-simple.js:209:11)\n    at async ProdRestoreSimple.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-prod-simple.js:318:7)"
+    },
+    {
+      "error": "invalid input syntax for type json",
+      "context": "Error insertando registro en entradas",
+      "stack": "error: invalid input syntax for type json\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdRestoreSimple.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-prod-simple.js:155:11)\n    at async ProdRestoreSimple.restoreProdDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-prod-simple.js:209:11)\n    at async ProdRestoreSimple.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-prod-simple.js:318:7)"
+    },
+    {
+      "error": "invalid input syntax for type json",
+      "context": "Error insertando registro en entradas",
+      "stack": "error: invalid input syntax for type json\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdRestoreSimple.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-prod-simple.js:155:11)\n    at async ProdRestoreSimple.restoreProdDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-prod-simple.js:209:11)\n    at async ProdRestoreSimple.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-prod-simple.js:318:7)"
+    },
+    {
+      "error": "invalid input syntax for type json",
+      "context": "Error insertando registro en entradas",
+      "stack": "error: invalid input syntax for type json\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdRestoreSimple.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-prod-simple.js:155:11)\n    at async ProdRestoreSimple.restoreProdDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-prod-simple.js:209:11)\n    at async ProdRestoreSimple.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-prod-simple.js:318:7)"
+    },
+    {
+      "error": "invalid input syntax for type json",
+      "context": "Error insertando registro en entradas",
+      "stack": "error: invalid input syntax for type json\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdRestoreSimple.restoreTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-prod-simple.js:155:11)\n    at async ProdRestoreSimple.restoreProdDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-prod-simple.js:209:11)\n    at async ProdRestoreSimple.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-prod-simple.js:318:7)"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "timestamp": "2025-09-15T20:42:01.088Z",
+  "backupType": "FULL_DATABASE_BACKUP",
+  "local": {
+    "success": true,
+    "file": "/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/backups/backup-2025-09-15T20-41-35-377Z/local-backup.sql",
+    "size": 267662,
+    "sizeMB": "0.26"
+  },
+  "prod": {
+    "success": true,
+    "file": "/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/backups/backup-2025-09-15T20-41-35-377Z/prod-backup.sql",
+    "size": 220084,
+    "sizeMB": "0.21"
+  },
+  "data": {
+    "success": true,
+    "localFile": "/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/backups/backup-2025-09-15T20-41-35-377Z/local-data.json",
+    "prodFile": "/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/backups/backup-2025-09-15T20-41-35-377Z/prod-data.json"
+  },
+  "summary": {
+    "totalFiles": 4,
+    "totalSizeMB": "0.47",
+    "success": true
+  }
+}

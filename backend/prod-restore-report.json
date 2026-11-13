@@ -1,0 +1,39 @@
+{
+  "timestamp": "2025-09-15T20:52:27.881Z",
+  "restoreType": "PROD_TO_ORIGINAL_STATE",
+  "backupUsed": "/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/backups/backup-2025-09-15T20-41-35-377Z",
+  "verification": {
+    "counts": {},
+    "matches": 0,
+    "differences": 0
+  },
+  "summary": {
+    "success": true,
+    "tablesRestored": 0,
+    "matches": 0,
+    "differences": 0
+  },
+  "logs": [
+    "[2025-09-15T20:52:04.218Z] [INFO] 🚀 Iniciando restauración de PROD a estado original...",
+    "[2025-09-15T20:52:04.221Z] [INFO] 🔌 Conectando a base de datos PROD...",
+    "[2025-09-15T20:52:05.326Z] [INFO] ✅ PROD conectado",
+    "[2025-09-15T20:52:05.327Z] [INFO] 💾 Creando respaldo de seguridad antes de restaurar...",
+    "[2025-09-15T20:52:26.515Z] [INFO] ✅ Respaldo pre-restauración creado: /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/backups/pre-restore-2025-09-15T20-52-05-327Z/prod-before-restore.sql (0.28 MB)",
+    "[2025-09-15T20:52:26.516Z] [INFO] 🗑️ Limpiando base de datos PROD...",
+    "[2025-09-15T20:52:27.720Z] [INFO] 📋 Encontradas 17 tablas para limpiar",
+    "[2025-09-15T20:52:27.878Z] [ERROR] Error limpiando base de datos PROD: permission denied to set parameter \"session_replication_role\"",
+    "[2025-09-15T20:52:27.880Z] [ERROR] Error fatal en restauración: permission denied to set parameter \"session_replication_role\""
+  ],
+  "errors": [
+    {
+      "error": "permission denied to set parameter \"session_replication_role\"",
+      "context": "Error limpiando base de datos PROD",
+      "stack": "error: permission denied to set parameter \"session_replication_role\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdRestore.clearProdDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-prod-database.js:104:7)\n    at async ProdRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-prod-database.js:257:7)"
+    },
+    {
+      "error": "permission denied to set parameter \"session_replication_role\"",
+      "context": "Error fatal en restauración",
+      "stack": "error: permission denied to set parameter \"session_replication_role\"\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdRestore.clearProdDatabase (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-prod-database.js:104:7)\n    at async ProdRestore.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/restore-prod-database.js:257:7)"
+    }
+  ]
+}

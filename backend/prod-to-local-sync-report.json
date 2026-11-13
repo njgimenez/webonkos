@@ -1,0 +1,591 @@
+{
+  "timestamp": "2025-09-15T20:42:48.099Z",
+  "syncType": "PROD_TO_LOCAL",
+  "summary": {
+    "tablesProcessed": 1,
+    "recordsInserted": 0,
+    "recordsUpdated": 0,
+    "recordsSkipped": 0,
+    "errors": 56,
+    "success": false
+  },
+  "logs": [
+    "[2025-09-15T20:42:44.150Z] [INFO] 🚀 Iniciando sincronización PROD → LOCAL...",
+    "[2025-09-15T20:42:44.153Z] [INFO] 🔌 Conectando a bases de datos...",
+    "[2025-09-15T20:42:44.196Z] [INFO] ✅ LOCAL conectado",
+    "[2025-09-15T20:42:45.278Z] [INFO] ✅ PROD conectado",
+    "[2025-09-15T20:42:45.278Z] [INFO] 🚀 Iniciando sincronización de datos PROD → LOCAL...",
+    "[2025-09-15T20:42:45.279Z] [INFO] 👥 Sincronizando pacientes (PROD → LOCAL)...",
+    "[2025-09-15T20:42:45.496Z] [INFO] 🔄 Paciente actualizado: Juan Pérez",
+    "[2025-09-15T20:42:45.507Z] [INFO] 🔄 Paciente actualizado: María López",
+    "[2025-09-15T20:42:45.519Z] [INFO] 🔄 Paciente actualizado: Roberto Silva",
+    "[2025-09-15T20:42:45.531Z] [INFO] 🔄 Paciente actualizado: Nelson Aguilar",
+    "[2025-09-15T20:42:45.538Z] [INFO] 🔄 Paciente actualizado: Carlos Groom",
+    "[2025-09-15T20:42:45.547Z] [INFO] 🔄 Paciente actualizado: Luis Perez",
+    "[2025-09-15T20:42:45.552Z] [INFO] 🔄 Paciente actualizado: Nelson Carmona",
+    "[2025-09-15T20:42:45.558Z] [INFO] 🔄 Paciente actualizado: Carmen Linarez",
+    "[2025-09-15T20:42:45.565Z] [INFO] 🔄 Paciente actualizado: Nelson Gimenez",
+    "[2025-09-15T20:42:45.571Z] [INFO] 🔄 Paciente actualizado: Ramon Peres",
+    "[2025-09-15T20:42:45.577Z] [INFO] 🔄 Paciente actualizado: Raul perex",
+    "[2025-09-15T20:42:45.587Z] [INFO] ➕ Paciente insertado: María García",
+    "[2025-09-15T20:42:45.592Z] [INFO] ➕ Paciente insertado: Carlos López",
+    "[2025-09-15T20:42:45.599Z] [INFO] ➕ Paciente insertado: Ana Martínez",
+    "[2025-09-15T20:42:45.605Z] [INFO] ➕ Paciente insertado: Pedro Rodríguez",
+    "[2025-09-15T20:42:45.612Z] [INFO] ➕ Paciente insertado: María García",
+    "[2025-09-15T20:42:45.619Z] [INFO] ➕ Paciente insertado: Ana Martínez",
+    "[2025-09-15T20:42:45.627Z] [INFO] ➕ Paciente insertado: Pedro Rodríguez",
+    "[2025-09-15T20:42:45.632Z] [INFO] ➕ Paciente insertado: María García",
+    "[2025-09-15T20:42:45.640Z] [INFO] ➕ Paciente insertado: Carlos López",
+    "[2025-09-15T20:42:45.644Z] [INFO] ➕ Paciente insertado: Ana Martínez",
+    "[2025-09-15T20:42:45.651Z] [INFO] ➕ Paciente insertado: Pedro Rodríguez",
+    "[2025-09-15T20:42:45.661Z] [INFO] ➕ Paciente insertado: María García",
+    "[2025-09-15T20:42:45.666Z] [INFO] ➕ Paciente insertado: Carlos López",
+    "[2025-09-15T20:42:45.672Z] [INFO] ➕ Paciente insertado: Ana Martínez Actualizada",
+    "[2025-09-15T20:42:45.678Z] [INFO] ➕ Paciente insertado: Pedro Rodríguez",
+    "[2025-09-15T20:42:45.682Z] [INFO] ➕ Paciente insertado: María García",
+    "[2025-09-15T20:42:45.688Z] [INFO] ➕ Paciente insertado: Carlos López",
+    "[2025-09-15T20:42:45.693Z] [INFO] ➕ Paciente insertado: Ana Martínez Actualizada",
+    "[2025-09-15T20:42:45.701Z] [INFO] ➕ Paciente insertado: Pedro Rodríguez",
+    "[2025-09-15T20:42:45.708Z] [INFO] ➕ Paciente insertado: Test Patient",
+    "[2025-09-15T20:42:45.712Z] [INFO] ➕ Paciente insertado: María García",
+    "[2025-09-15T20:42:45.719Z] [INFO] ➕ Paciente insertado: Carlos López",
+    "[2025-09-15T20:42:45.734Z] [INFO] ➕ Paciente insertado: Ana Martínez Actualizada",
+    "[2025-09-15T20:42:45.740Z] [INFO] ➕ Paciente insertado: Pedro Rodríguez",
+    "[2025-09-15T20:42:45.749Z] [INFO] ➕ Paciente insertado: Gabi Perexz",
+    "[2025-09-15T20:42:45.749Z] [INFO] ✅ Pacientes sincronizados: 25 insertados, 11 actualizados",
+    "[2025-09-15T20:42:45.756Z] [INFO] 📁 Sincronizando media (PROD → LOCAL)...",
+    "[2025-09-15T20:42:46.228Z] [INFO] 🔄 Media actualizado: tbg.jpg",
+    "[2025-09-15T20:42:46.234Z] [INFO] 🔄 Media actualizado: 1242x2208-px-colorful-digital-art-portrait-display-vertical-nature-trees-hd-art-wallpaper-preview.jpg",
+    "[2025-09-15T20:42:46.243Z] [INFO] 🔄 Media actualizado: onkos.png",
+    "[2025-09-15T20:42:46.247Z] [INFO] 🔄 Media actualizado: oncologya-300x282.webp",
+    "[2025-09-15T20:42:46.252Z] [INFO] 🔄 Media actualizado: oncologya-300x282.webp",
+    "[2025-09-15T20:42:46.256Z] [INFO] 🔄 Media actualizado: oncologya-300x282.png",
+    "[2025-09-15T20:42:46.266Z] [INFO] 🔄 Media actualizado: Image_fx.jpg",
+    "[2025-09-15T20:42:46.272Z] [INFO] 🔄 Media actualizado: 1242x2208-px-colorful-digital-art-portrait-display-vertical-nature-trees-hd-art-wallpaper-preview.jpg",
+    "[2025-09-15T20:42:46.279Z] [INFO] 🔄 Media actualizado: Image_fx.jpg",
+    "[2025-09-15T20:42:46.284Z] [INFO] 🔄 Media actualizado: tbg.jpg",
+    "[2025-09-15T20:42:46.292Z] [INFO] 🔄 Media actualizado: 1242x2208-px-colorful-digital-art-portrait-display-vertical-nature-trees-hd-art-wallpaper-preview.jpg",
+    "[2025-09-15T20:42:46.297Z] [INFO] 🔄 Media actualizado: Image_fx.jpg",
+    "[2025-09-15T20:42:46.302Z] [INFO] 🔄 Media actualizado: Image_fx.jpg",
+    "[2025-09-15T20:42:46.313Z] [INFO] 🔄 Media actualizado: 1242x2208-px-colorful-digital-art-portrait-display-vertical-nature-trees-hd-art-wallpaper-preview.jpg",
+    "[2025-09-15T20:42:46.320Z] [INFO] 🔄 Media actualizado: Image_fx.jpg",
+    "[2025-09-15T20:42:46.324Z] [INFO] 🔄 Media actualizado: oncologya-300x282.png",
+    "[2025-09-15T20:42:46.334Z] [INFO] 🔄 Media actualizado: oncologya-300x282.png",
+    "[2025-09-15T20:42:46.341Z] [INFO] 🔄 Media actualizado: oncologya-300x282.png",
+    "[2025-09-15T20:42:46.348Z] [INFO] 🔄 Media actualizado: Screenshot_20250815_113136_Chrome.jpeg",
+    "[2025-09-15T20:42:46.352Z] [INFO] 🔄 Media actualizado: onkos.png",
+    "[2025-09-15T20:42:46.359Z] [INFO] 🔄 Media actualizado: tbg.jpg",
+    "[2025-09-15T20:42:46.363Z] [INFO] 🔄 Media actualizado: onkos.png",
+    "[2025-09-15T20:42:46.369Z] [INFO] 🔄 Media actualizado: tbg.jpg",
+    "[2025-09-15T20:42:46.376Z] [INFO] 🔄 Media actualizado: orack.jpg",
+    "[2025-09-15T20:42:46.382Z] [INFO] 🔄 Media actualizado: onkos.png",
+    "[2025-09-15T20:42:46.390Z] [INFO] 🔄 Media actualizado: test-image.png",
+    "[2025-09-15T20:42:46.396Z] [INFO] 🔄 Media actualizado: IMG-20250817-WA0045.jpeg",
+    "[2025-09-15T20:42:46.400Z] [INFO] 🔄 Media actualizado: onkos.png",
+    "[2025-09-15T20:42:46.405Z] [INFO] 🔄 Media actualizado: image.png",
+    "[2025-09-15T20:42:46.412Z] [INFO] 🔄 Media actualizado: IMG-20250817-WA0045.jpeg",
+    "[2025-09-15T20:42:46.418Z] [INFO] 🔄 Media actualizado: oncologya-300x282.png",
+    "[2025-09-15T20:42:46.424Z] [INFO] 🔄 Media actualizado: onkos.png",
+    "[2025-09-15T20:42:46.428Z] [INFO] 🔄 Media actualizado: onkos.png",
+    "[2025-09-15T20:42:46.433Z] [INFO] 🔄 Media actualizado: onkos.png",
+    "[2025-09-15T20:42:46.438Z] [INFO] 🔄 Media actualizado: onkos.png",
+    "[2025-09-15T20:42:46.442Z] [INFO] 🔄 Media actualizado: onkos.png",
+    "[2025-09-15T20:42:46.447Z] [INFO] 🔄 Media actualizado: FACHADA-1-1024x770.webp",
+    "[2025-09-15T20:42:46.455Z] [INFO] 🔄 Media actualizado: FACHADA-1-1024x770.png",
+    "[2025-09-15T20:42:46.461Z] [INFO] 🔄 Media actualizado: FACHADA-1-1024x770.png",
+    "[2025-09-15T20:42:46.478Z] [INFO] 🔄 Media actualizado: FACHADA-1-1024x770.png",
+    "[2025-09-15T20:42:46.485Z] [INFO] 🔄 Media actualizado: FACHADA-1-1024x770.png",
+    "[2025-09-15T20:42:46.494Z] [INFO] 🔄 Media actualizado: FACHADA-1-1024x770.png",
+    "[2025-09-15T20:42:46.504Z] [INFO] 🔄 Media actualizado: a80f9500.png",
+    "[2025-09-15T20:42:46.510Z] [INFO] 🔄 Media actualizado: 1a5b96b3.png",
+    "[2025-09-15T20:42:46.516Z] [INFO] 🔄 Media actualizado: 1a5b96b3.png",
+    "[2025-09-15T20:42:46.521Z] [INFO] 🔄 Media actualizado: 1a5b96b3.png",
+    "[2025-09-15T20:42:46.527Z] [INFO] 🔄 Media actualizado: a80f9500.png",
+    "[2025-09-15T20:42:46.533Z] [INFO] 🔄 Media actualizado: 1a5b96b3.png",
+    "[2025-09-15T20:42:46.538Z] [INFO] 🔄 Media actualizado: 01b2f7a7.png",
+    "[2025-09-15T20:42:46.547Z] [INFO] 🔄 Media actualizado: f9f06470.png",
+    "[2025-09-15T20:42:46.550Z] [INFO] 🔄 Media actualizado: 54ef713b.png",
+    "[2025-09-15T20:42:46.553Z] [INFO] 🔄 Media actualizado: 75d6dae1.png",
+    "[2025-09-15T20:42:46.558Z] [INFO] 🔄 Media actualizado: e385c870.png",
+    "[2025-09-15T20:42:46.560Z] [INFO] 🔄 Media actualizado: 7014bfe1.png",
+    "[2025-09-15T20:42:46.562Z] [INFO] 🔄 Media actualizado: b957bb56.png",
+    "[2025-09-15T20:42:46.565Z] [INFO] 🔄 Media actualizado: a254c5ca.png",
+    "[2025-09-15T20:42:46.568Z] [INFO] 🔄 Media actualizado: 012e5069.png",
+    "[2025-09-15T20:42:46.571Z] [INFO] 🔄 Media actualizado: 82f2e7b5.png",
+    "[2025-09-15T20:42:46.574Z] [INFO] 🔄 Media actualizado: 1f421a56.png",
+    "[2025-09-15T20:42:46.577Z] [INFO] 🔄 Media actualizado: 800cc9c5.png",
+    "[2025-09-15T20:42:46.579Z] [INFO] 🔄 Media actualizado: b823b80b.png",
+    "[2025-09-15T20:42:46.581Z] [INFO] 🔄 Media actualizado: Image_fx (2).jpg",
+    "[2025-09-15T20:42:46.585Z] [INFO] 🔄 Media actualizado: Image_fx (3).jpg",
+    "[2025-09-15T20:42:46.588Z] [INFO] 🔄 Media actualizado: oncologya-300x282.png",
+    "[2025-09-15T20:42:46.590Z] [INFO] 🔄 Media actualizado: Whisk_c290a4ec45.jpg",
+    "[2025-09-15T20:42:46.593Z] [INFO] 🔄 Media actualizado: Image_fx (4).jpg",
+    "[2025-09-15T20:42:46.597Z] [INFO] 🔄 Media actualizado: Image_fx (5).jpg",
+    "[2025-09-15T20:42:46.601Z] [INFO] 🔄 Media actualizado: Image_fx (6).jpg",
+    "[2025-09-15T20:42:46.604Z] [INFO] 🔄 Media actualizado: Image_fx (7).jpg",
+    "[2025-09-15T20:42:46.606Z] [INFO] 🔄 Media actualizado: Image_fx (8).jpg",
+    "[2025-09-15T20:42:46.610Z] [INFO] 🔄 Media actualizado: Image_fx (9).jpg",
+    "[2025-09-15T20:42:46.612Z] [INFO] 🔄 Media actualizado: Image_fx (10).jpg",
+    "[2025-09-15T20:42:46.617Z] [INFO] 🔄 Media actualizado: Image_fx (11).jpg",
+    "[2025-09-15T20:42:46.619Z] [INFO] 🔄 Media actualizado: Image_fx (12).jpg",
+    "[2025-09-15T20:42:46.624Z] [INFO] 🔄 Media actualizado: 7014bfe1.png",
+    "[2025-09-15T20:42:46.626Z] [INFO] 🔄 Media actualizado: Image_fx (13).jpg",
+    "[2025-09-15T20:42:46.629Z] [INFO] 🔄 Media actualizado: Image_fx (14).jpg",
+    "[2025-09-15T20:42:46.631Z] [INFO] 🔄 Media actualizado: Image_fx (16).jpg",
+    "[2025-09-15T20:42:46.635Z] [INFO] 🔄 Media actualizado: 1f72010f.jpg",
+    "[2025-09-15T20:42:46.638Z] [INFO] 🔄 Media actualizado: Image_fx (19).jpg",
+    "[2025-09-15T20:42:46.641Z] [INFO] 🔄 Media actualizado: Image_fx (18).jpg",
+    "[2025-09-15T20:42:46.643Z] [INFO] 🔄 Media actualizado: Image_fx (20).jpg",
+    "[2025-09-15T20:42:46.646Z] [INFO] 🔄 Media actualizado: aeb23060.jpg",
+    "[2025-09-15T20:42:46.651Z] [INFO] 🔄 Media actualizado: Image_fx234.jpg",
+    "[2025-09-15T20:42:46.654Z] [INFO] 🔄 Media actualizado: Image_fx (22).jpg",
+    "[2025-09-15T20:42:46.657Z] [INFO] 🔄 Media actualizado: Image_fx (21).jpg",
+    "[2025-09-15T20:42:46.659Z] [INFO] 🔄 Media actualizado: Screenshot From 2025-09-05 11-51-29.png",
+    "[2025-09-15T20:42:46.664Z] [INFO] 🔄 Media actualizado: f6921c7f.jpg",
+    "[2025-09-15T20:42:46.668Z] [INFO] 🔄 Media actualizado: Image_fx (21).jpg",
+    "[2025-09-15T20:42:46.670Z] [INFO] 🔄 Media actualizado: f6921c7f.jpg",
+    "[2025-09-15T20:42:46.672Z] [INFO] 🔄 Media actualizado: Screenshot From 2025-09-05 11-51-29.png",
+    "[2025-09-15T20:42:46.676Z] [INFO] 🔄 Media actualizado: Image_fx234.jpg",
+    "[2025-09-15T20:42:46.678Z] [INFO] 🔄 Media actualizado: aeb23060.jpg",
+    "[2025-09-15T20:42:46.681Z] [INFO] 🔄 Media actualizado: UniversalUpscaler_90854297-7275-43e7-9ba5-fd81305731a3.jpg",
+    "[2025-09-15T20:42:46.683Z] [INFO] 🔄 Media actualizado: Image_fx.jpg",
+    "[2025-09-15T20:42:46.686Z] [INFO] 🔄 Media actualizado: inmunoterapia-cancer-1.jpg",
+    "[2025-09-15T20:42:46.690Z] [INFO] ➕ Media insertado: Whisk_db413d8bc9.jpg",
+    "[2025-09-15T20:42:46.696Z] [INFO] ➕ Media insertado: 968b6619.jpg",
+    "[2025-09-15T20:42:46.701Z] [INFO] ➕ Media insertado: 1a5b96b3.png",
+    "[2025-09-15T20:42:46.705Z] [INFO] ➕ Media insertado: 968b6619.jpg",
+    "[2025-09-15T20:42:46.709Z] [INFO] ➕ Media insertado: 63202812.jpg",
+    "[2025-09-15T20:42:46.712Z] [INFO] ➕ Media insertado: 379bceb1.jpeg",
+    "[2025-09-15T20:42:46.717Z] [INFO] ➕ Media insertado: 4541f976.jpg",
+    "[2025-09-15T20:42:46.720Z] [INFO] ➕ Media insertado: eb8d277c.jpg",
+    "[2025-09-15T20:42:46.724Z] [INFO] ➕ Media insertado: f1c00c8e.jpeg",
+    "[2025-09-15T20:42:46.726Z] [INFO] ➕ Media insertado: 718cb6d8.jpg",
+    "[2025-09-15T20:42:46.728Z] [INFO] ➕ Media insertado: 796f5927.jpg",
+    "[2025-09-15T20:42:46.731Z] [INFO] ➕ Media insertado: Whisk_c97522891a.jpg",
+    "[2025-09-15T20:42:46.735Z] [INFO] ➕ Media insertado: 3179ab5d.jpg",
+    "[2025-09-15T20:42:46.738Z] [INFO] ➕ Media insertado: Whisk_56f97596b2.jpg",
+    "[2025-09-15T20:42:46.740Z] [INFO] ➕ Media insertado: fefbd36c.jpg",
+    "[2025-09-15T20:42:46.744Z] [INFO] ➕ Media insertado: 7f2ec402.jpg",
+    "[2025-09-15T20:42:46.747Z] [INFO] ➕ Media insertado: 2b48d88e.jpg",
+    "[2025-09-15T20:42:46.749Z] [INFO] ➕ Media insertado: Whisk_d9086cfb20.jpg",
+    "[2025-09-15T20:42:46.751Z] [INFO] ➕ Media insertado: 65573e62.jpg",
+    "[2025-09-15T20:42:46.754Z] [INFO] ➕ Media insertado: Whisk_2d56602a9a.jpg",
+    "[2025-09-15T20:42:46.758Z] [INFO] ➕ Media insertado: c179baf6.jpg",
+    "[2025-09-15T20:42:46.760Z] [INFO] ➕ Media insertado: Image_fx (23).jpg",
+    "[2025-09-15T20:42:46.763Z] [INFO] ➕ Media insertado: 4571c65e.jpg",
+    "[2025-09-15T20:42:46.765Z] [INFO] ➕ Media insertado: VITAMINA-C_-CON_5.jpg",
+    "[2025-09-15T20:42:46.767Z] [INFO] ➕ Media insertado: caral_marca_positivo-300x61.png",
+    "[2025-09-15T20:42:46.770Z] [INFO] ➕ Media insertado: Screenshot From 2025-09-08 08-47-25.png",
+    "[2025-09-15T20:42:46.773Z] [INFO] ➕ Media insertado: Screenshot From 2025-09-08 08-50-54.png",
+    "[2025-09-15T20:42:46.776Z] [INFO] ➕ Media insertado: inmunoterapia-cancer-1.jpg",
+    "[2025-09-15T20:42:46.779Z] [INFO] ➕ Media insertado: inmunoterapia-cancer-1.jpg",
+    "[2025-09-15T20:42:46.783Z] [INFO] ➕ Media insertado: Image_fx (21).jpg",
+    "[2025-09-15T20:42:46.785Z] [INFO] ➕ Media insertado: f6921c7f.jpg",
+    "[2025-09-15T20:42:46.789Z] [INFO] ➕ Media insertado: Screenshot From 2025-09-05 11-51-29.png",
+    "[2025-09-15T20:42:46.792Z] [INFO] ➕ Media insertado: Image_fx.jpg",
+    "[2025-09-15T20:42:46.796Z] [INFO] ➕ Media insertado: UniversalUpscaler_90854297-7275-43e7-9ba5-fd81305731a3.jpg",
+    "[2025-09-15T20:42:46.799Z] [INFO] ➕ Media insertado: UniversalUpscaler_90854297-7275-43e7-9ba5-fd81305731a3.jpg",
+    "[2025-09-15T20:42:46.802Z] [INFO] ➕ Media insertado: Whisk_c97522891a.jpg",
+    "[2025-09-15T20:42:46.805Z] [INFO] ➕ Media insertado: Whisk_56f97596b2.jpg",
+    "[2025-09-15T20:42:46.807Z] [INFO] ➕ Media insertado: 2b63c165.jpg",
+    "[2025-09-15T20:42:46.812Z] [INFO] ➕ Media insertado: 8b8592ce.jpg",
+    "[2025-09-15T20:42:46.815Z] [INFO] ➕ Media insertado: d32ea421.jpg",
+    "[2025-09-15T20:42:46.818Z] [INFO] ➕ Media insertado: d8158a6f.jpg",
+    "[2025-09-15T20:42:46.820Z] [INFO] ➕ Media insertado: 9310fda5.jpg",
+    "[2025-09-15T20:42:46.824Z] [INFO] ➕ Media insertado: Whisk_db413d8bc9.jpg",
+    "[2025-09-15T20:42:46.827Z] [INFO] ➕ Media insertado: Whisk_56f97596b2.jpg",
+    "[2025-09-15T20:42:46.829Z] [INFO] ➕ Media insertado: Whisk_c97522891a.jpg",
+    "[2025-09-15T20:42:46.831Z] [INFO] ➕ Media insertado: aeb23060.jpg",
+    "[2025-09-15T20:42:46.833Z] [INFO] ➕ Media insertado: Image_fx (22).jpg",
+    "[2025-09-15T20:42:46.837Z] [INFO] ➕ Media insertado: Whisk_c97522891a.jpg",
+    "[2025-09-15T20:42:46.839Z] [INFO] ➕ Media insertado: 968b6619.jpg",
+    "[2025-09-15T20:42:46.842Z] [INFO] ➕ Media insertado: 63202812.jpg",
+    "[2025-09-15T20:42:46.844Z] [INFO] ➕ Media insertado: 379bceb1.jpeg",
+    "[2025-09-15T20:42:46.846Z] [INFO] ➕ Media insertado: 4541f976.jpg",
+    "[2025-09-15T20:42:46.850Z] [INFO] ➕ Media insertado: eb8d277c.jpg",
+    "[2025-09-15T20:42:46.853Z] [INFO] ➕ Media insertado: f1c00c8e.jpeg",
+    "[2025-09-15T20:42:46.857Z] [INFO] ➕ Media insertado: 718cb6d8.jpg",
+    "[2025-09-15T20:42:46.859Z] [INFO] ➕ Media insertado: 796f5927.jpg",
+    "[2025-09-15T20:42:46.862Z] [INFO] ➕ Media insertado: Whisk_2d56602a9a.jpg",
+    "[2025-09-15T20:42:46.866Z] [INFO] ➕ Media insertado: 3179ab5d.jpg",
+    "[2025-09-15T20:42:46.868Z] [INFO] ➕ Media insertado: 9310fda5.jpg",
+    "[2025-09-15T20:42:46.871Z] [INFO] ➕ Media insertado: 2b48d88e.jpg",
+    "[2025-09-15T20:42:46.873Z] [INFO] ➕ Media insertado: Whisk_d9086cfb20.jpg",
+    "[2025-09-15T20:42:46.878Z] [INFO] ➕ Media insertado: 65573e62.jpg",
+    "[2025-09-15T20:42:46.880Z] [INFO] ➕ Media insertado: Whisk_56f97596b2.jpg",
+    "[2025-09-15T20:42:46.883Z] [INFO] ➕ Media insertado: Image_fx (23).jpg",
+    "[2025-09-15T20:42:46.885Z] [INFO] ➕ Media insertado: c179baf6.jpg",
+    "[2025-09-15T20:42:46.891Z] [INFO] ➕ Media insertado: VITAMINA-C_-CON_5.jpg",
+    "[2025-09-15T20:42:46.893Z] [INFO] ➕ Media insertado: 4571c65e.jpg",
+    "[2025-09-15T20:42:46.898Z] [INFO] ➕ Media insertado: Viscum-album-20173510-A-2000x1125.jpg",
+    "[2025-09-15T20:42:46.900Z] [INFO] ➕ Media insertado: Screenshot From 2025-09-08 08-47-25.png",
+    "[2025-09-15T20:42:46.904Z] [INFO] ➕ Media insertado: wheat-bran-scaled-2048x1362.webp",
+    "[2025-09-15T20:42:46.907Z] [INFO] ➕ Media insertado: wheat-bran-scaled-2048x1362.webp",
+    "[2025-09-15T20:42:46.908Z] [INFO] ✅ Media sincronizado: 71 insertados, 96 actualizados",
+    "[2025-09-15T20:42:46.908Z] [INFO] 📅 Sincronizando citas (PROD → LOCAL)...",
+    "[2025-09-15T20:42:47.099Z] [INFO] 🔄 Cita actualizada: ID 1",
+    "[2025-09-15T20:42:47.106Z] [INFO] 🔄 Cita actualizada: ID 2",
+    "[2025-09-15T20:42:47.112Z] [INFO] 🔄 Cita actualizada: ID 3",
+    "[2025-09-15T20:42:47.119Z] [INFO] 🔄 Cita actualizada: ID 4",
+    "[2025-09-15T20:42:47.131Z] [INFO] 🔄 Cita actualizada: ID 5",
+    "[2025-09-15T20:42:47.136Z] [INFO] 🔄 Cita actualizada: ID 6",
+    "[2025-09-15T20:42:47.143Z] [INFO] 🔄 Cita actualizada: ID 7",
+    "[2025-09-15T20:42:47.148Z] [INFO] 🔄 Cita actualizada: ID 8",
+    "[2025-09-15T20:42:47.157Z] [INFO] 🔄 Cita actualizada: ID 9",
+    "[2025-09-15T20:42:47.161Z] [INFO] 🔄 Cita actualizada: ID 10",
+    "[2025-09-15T20:42:47.166Z] [INFO] 🔄 Cita actualizada: ID 11",
+    "[2025-09-15T20:42:47.172Z] [INFO] 🔄 Cita actualizada: ID 12",
+    "[2025-09-15T20:42:47.178Z] [INFO] 🔄 Cita actualizada: ID 13",
+    "[2025-09-15T20:42:47.183Z] [INFO] 🔄 Cita actualizada: ID 14",
+    "[2025-09-15T20:42:47.191Z] [INFO] 🔄 Cita actualizada: ID 15",
+    "[2025-09-15T20:42:47.196Z] [INFO] 🔄 Cita actualizada: ID 16",
+    "[2025-09-15T20:42:47.204Z] [INFO] 🔄 Cita actualizada: ID 17",
+    "[2025-09-15T20:42:47.213Z] [INFO] ➕ Cita insertada: ID 18",
+    "[2025-09-15T20:42:47.220Z] [INFO] ➕ Cita insertada: ID 19",
+    "[2025-09-15T20:42:47.225Z] [INFO] ➕ Cita insertada: ID 20",
+    "[2025-09-15T20:42:47.234Z] [INFO] ➕ Cita insertada: ID 21",
+    "[2025-09-15T20:42:47.234Z] [INFO] ✅ Citas sincronizadas: 4 insertadas, 17 actualizadas",
+    "[2025-09-15T20:42:47.238Z] [INFO] 🔄 Sincronizando datos de tabla: entradas",
+    "[2025-09-15T20:42:47.878Z] [ERROR] Error procesando registro ID 1 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:47.883Z] [ERROR] Error procesando registro ID 2 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:47.892Z] [ERROR] Error procesando registro ID 3 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:47.897Z] [ERROR] Error procesando registro ID 4 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:47.921Z] [ERROR] Error procesando registro ID 5 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:47.926Z] [ERROR] Error procesando registro ID 6 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:47.930Z] [ERROR] Error procesando registro ID 7 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:47.935Z] [ERROR] Error procesando registro ID 8 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:47.939Z] [ERROR] Error procesando registro ID 9 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:47.944Z] [ERROR] Error procesando registro ID 10 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:47.951Z] [ERROR] Error procesando registro ID 11 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:47.955Z] [ERROR] Error procesando registro ID 12 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:47.961Z] [ERROR] Error procesando registro ID 13 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:47.964Z] [ERROR] Error procesando registro ID 14 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:47.969Z] [ERROR] Error procesando registro ID 15 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:47.973Z] [ERROR] Error procesando registro ID 16 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:47.977Z] [ERROR] Error procesando registro ID 17 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:47.983Z] [ERROR] Error procesando registro ID 18 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:47.987Z] [ERROR] Error procesando registro ID 19 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:47.992Z] [ERROR] Error procesando registro ID 20 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.004Z] [ERROR] Error procesando registro ID 21 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.006Z] [ERROR] Error procesando registro ID 22 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.014Z] [ERROR] Error procesando registro ID 23 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.020Z] [ERROR] Error procesando registro ID 24 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.024Z] [ERROR] Error procesando registro ID 25 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.026Z] [ERROR] Error procesando registro ID 26 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.028Z] [ERROR] Error procesando registro ID 27 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.030Z] [ERROR] Error procesando registro ID 28 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.031Z] [ERROR] Error procesando registro ID 29 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.033Z] [ERROR] Error procesando registro ID 30 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.038Z] [ERROR] Error procesando registro ID 31 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.043Z] [ERROR] Error procesando registro ID 32 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.046Z] [ERROR] Error procesando registro ID 33 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.049Z] [ERROR] Error procesando registro ID 34 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.055Z] [ERROR] Error procesando registro ID 35 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.057Z] [ERROR] Error procesando registro ID 36 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.060Z] [ERROR] Error procesando registro ID 37 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.063Z] [ERROR] Error procesando registro ID 38 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.065Z] [ERROR] Error procesando registro ID 39 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.067Z] [ERROR] Error procesando registro ID 40 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.069Z] [ERROR] Error procesando registro ID 41 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.070Z] [ERROR] Error procesando registro ID 42 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.073Z] [ERROR] Error procesando registro ID 43 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.075Z] [ERROR] Error procesando registro ID 44 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.078Z] [ERROR] Error procesando registro ID 45 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.080Z] [ERROR] Error procesando registro ID 46 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.082Z] [ERROR] Error procesando registro ID 47 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.083Z] [ERROR] Error procesando registro ID 48 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.085Z] [ERROR] Error procesando registro ID 49 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.087Z] [ERROR] Error procesando registro ID 50 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.091Z] [ERROR] Error procesando registro ID 51 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.092Z] [ERROR] Error procesando registro ID 52 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.094Z] [ERROR] Error procesando registro ID 53 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.095Z] [ERROR] Error procesando registro ID 54 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.096Z] [ERROR] Error procesando registro ID 55 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.097Z] [ERROR] Error procesando registro ID 58 en entradas: column \"categoria_id\" of relation \"entradas\" does not exist",
+    "[2025-09-15T20:42:48.098Z] [INFO] ✅ entradas: 0 registros procesados (0 insertados, 0 actualizados, 0 omitidos)",
+    "[2025-09-15T20:42:48.098Z] [INFO] ✅ Sincronización completada en 2819ms",
+    "[2025-09-15T20:42:48.098Z] [INFO] 📊 Estadísticas: 1 tablas, 0 insertados, 0 actualizados"
+  ],
+  "errors": [
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 1 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 2 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 3 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 4 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 5 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 6 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 7 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 8 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 9 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 10 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 11 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 12 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 13 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 14 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 15 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 16 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 17 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 18 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 19 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 20 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 21 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 22 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 23 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 24 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 25 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 26 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 27 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 28 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 29 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 30 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 31 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 32 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 33 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 34 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 35 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 36 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 37 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 38 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 39 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 40 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 41 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 42 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 43 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 44 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 45 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 46 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 47 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 48 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 49 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 50 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 51 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 52 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 53 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 54 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 55 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    },
+    {
+      "error": "column \"categoria_id\" of relation \"entradas\" does not exist",
+      "context": "Error procesando registro ID 58 en entradas",
+      "stack": "error: column \"categoria_id\" of relation \"entradas\" does not exist\n    at /home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/node_modules/pg/lib/client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async ProdToLocalSync.updateRecord (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:197:5)\n    at async ProdToLocalSync.syncTableData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:110:15)\n    at async ProdToLocalSync.syncAllData (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:411:7)\n    at async ProdToLocalSync.run (/home/onkosdev/Documents/PROYECTOS/webIAcontrol/backend/sync-data-prod-to-local.js:459:23)"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+FORZAR ACTUALIZACIÓN BACKEND RENDER - COMMIT 8e724f8
+====================================================
+
+FECHA: $(date)
+COMMIT: 8e724f8
+BRANCH: mejoras
+DESCRIPCIÓN: Backend con endpoint NLU funcionando
+
+PROBLEMA:
+- Frontend actualizado y funcionando
+- Backend en Render devuelve error 400
+- Backend local funciona correctamente
+- Endpoint /api/chatbot/nlu no responde en Render
+
+SOLUCIÓN:
+1. Verificar que Render use commit 8e724f8 para backend
+2. Si no, hacer Manual Deploy del backend
+3. Verificar que el endpoint NLU funcione
+
+VERIFICACIÓN:
+- Backend local: ✅ Funciona
+- Frontend Render: ✅ Actualizado
+- Backend Render: ❌ Necesita actualización
+
+ESTADO: PENDIENTE DE DEPLOY DEL BACKEND

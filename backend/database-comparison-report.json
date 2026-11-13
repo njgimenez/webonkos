@@ -1,0 +1,3466 @@
+{
+  "production": {
+    "tables": {
+      "categorias": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "categorias",
+          "tableowner": "onkos_user",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('categorias_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "nombre",
+            "data_type": "character varying",
+            "character_maximum_length": 100,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "slug",
+            "data_type": "character varying",
+            "character_maximum_length": 100,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 3
+          },
+          {
+            "column_name": "descripcion",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 4
+          },
+          {
+            "column_name": "color_hex",
+            "data_type": "character varying",
+            "character_maximum_length": 7,
+            "is_nullable": "YES",
+            "column_default": "'#667eea'::character varying",
+            "ordinal_position": 5
+          },
+          {
+            "column_name": "orden_menu",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "0",
+            "ordinal_position": 6
+          },
+          {
+            "column_name": "activo",
+            "data_type": "boolean",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "true",
+            "ordinal_position": 7
+          },
+          {
+            "column_name": "created_at",
+            "data_type": "timestamp without time zone",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "CURRENT_TIMESTAMP",
+            "ordinal_position": 8
+          },
+          {
+            "column_name": "updated_at",
+            "data_type": "timestamp without time zone",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "CURRENT_TIMESTAMP",
+            "ordinal_position": 9
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "categorias_pkey",
+            "indexdef": "CREATE UNIQUE INDEX categorias_pkey ON public.categorias USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          },
+          {
+            "indexname": "categorias_slug_key",
+            "indexdef": "CREATE UNIQUE INDEX categorias_slug_key ON public.categorias USING btree (slug)",
+            "indisunique": true,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_categorias_slug",
+            "indexdef": "CREATE INDEX idx_categorias_slug ON public.categorias USING btree (slug)",
+            "indisunique": false,
+            "indisprimary": false
+          }
+        ],
+        "foreignKeys": [],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "centro_medico": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "centro_medico",
+          "tableowner": "onkos_user",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('centro_medico_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "nombre",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "direccion",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 3
+          },
+          {
+            "column_name": "telefono",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 4
+          },
+          {
+            "column_name": "correo",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 5
+          },
+          {
+            "column_name": "ruc",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 6
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "centro_medico_pkey",
+            "indexdef": "CREATE UNIQUE INDEX centro_medico_pkey ON public.centro_medico USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          }
+        ],
+        "foreignKeys": [],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "citas": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "citas",
+          "tableowner": "onkos_user",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('citas_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "paciente_id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "medico_id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 3
+          },
+          {
+            "column_name": "fecha",
+            "data_type": "timestamp without time zone",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 4
+          },
+          {
+            "column_name": "motivo",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 5
+          },
+          {
+            "column_name": "estado",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "'agendada'::text",
+            "ordinal_position": 6
+          },
+          {
+            "column_name": "observaciones",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 7
+          },
+          {
+            "column_name": "duracion",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "30",
+            "ordinal_position": 8
+          },
+          {
+            "column_name": "fecha_creacion",
+            "data_type": "timestamp without time zone",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "CURRENT_TIMESTAMP",
+            "ordinal_position": 9
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "citas_pkey",
+            "indexdef": "CREATE UNIQUE INDEX citas_pkey ON public.citas USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          },
+          {
+            "indexname": "idx_citas_estado",
+            "indexdef": "CREATE INDEX idx_citas_estado ON public.citas USING btree (estado)",
+            "indisunique": false,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_citas_medico_fecha",
+            "indexdef": "CREATE INDEX idx_citas_medico_fecha ON public.citas USING btree (medico_id, fecha)",
+            "indisunique": false,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_citas_paciente_fecha",
+            "indexdef": "CREATE INDEX idx_citas_paciente_fecha ON public.citas USING btree (paciente_id, fecha)",
+            "indisunique": false,
+            "indisprimary": false
+          }
+        ],
+        "foreignKeys": [
+          {
+            "constraint_name": "citas_medico_id_fkey",
+            "table_name": "citas",
+            "column_name": "medico_id",
+            "foreign_table_name": "medicos",
+            "foreign_column_name": "id"
+          },
+          {
+            "constraint_name": "citas_paciente_id_fkey",
+            "table_name": "citas",
+            "column_name": "paciente_id",
+            "foreign_table_name": "pacientes",
+            "foreign_column_name": "id"
+          }
+        ],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "entradas": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "entradas",
+          "tableowner": "onkos_user",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('entradas_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "titulo",
+            "data_type": "character varying",
+            "character_maximum_length": 255,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "slug",
+            "data_type": "character varying",
+            "character_maximum_length": 255,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 3
+          },
+          {
+            "column_name": "contenido",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 4
+          },
+          {
+            "column_name": "resumen",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 5
+          },
+          {
+            "column_name": "imagen_principal",
+            "data_type": "character varying",
+            "character_maximum_length": 500,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 6
+          },
+          {
+            "column_name": "categoria_id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 7
+          },
+          {
+            "column_name": "autor_id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 8
+          },
+          {
+            "column_name": "estado",
+            "data_type": "character varying",
+            "character_maximum_length": 20,
+            "is_nullable": "YES",
+            "column_default": "'borrador'::character varying",
+            "ordinal_position": 9
+          },
+          {
+            "column_name": "fecha_publicacion",
+            "data_type": "timestamp without time zone",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 10
+          },
+          {
+            "column_name": "meta_title",
+            "data_type": "character varying",
+            "character_maximum_length": 255,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 11
+          },
+          {
+            "column_name": "meta_description",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 12
+          },
+          {
+            "column_name": "tags",
+            "data_type": "jsonb",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "'[]'::jsonb",
+            "ordinal_position": 13
+          },
+          {
+            "column_name": "vistas",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "0",
+            "ordinal_position": 14
+          },
+          {
+            "column_name": "destacado",
+            "data_type": "boolean",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "false",
+            "ordinal_position": 15
+          },
+          {
+            "column_name": "orden",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "0",
+            "ordinal_position": 16
+          },
+          {
+            "column_name": "created_at",
+            "data_type": "timestamp without time zone",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "CURRENT_TIMESTAMP",
+            "ordinal_position": 17
+          },
+          {
+            "column_name": "updated_at",
+            "data_type": "timestamp without time zone",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "CURRENT_TIMESTAMP",
+            "ordinal_position": 18
+          },
+          {
+            "column_name": "tipo_entrada",
+            "data_type": "character varying",
+            "character_maximum_length": 20,
+            "is_nullable": "YES",
+            "column_default": "'entrada'::character varying",
+            "ordinal_position": 19
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "entradas_pkey",
+            "indexdef": "CREATE UNIQUE INDEX entradas_pkey ON public.entradas USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          },
+          {
+            "indexname": "entradas_slug_key",
+            "indexdef": "CREATE UNIQUE INDEX entradas_slug_key ON public.entradas USING btree (slug)",
+            "indisunique": true,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_entradas_categoria",
+            "indexdef": "CREATE INDEX idx_entradas_categoria ON public.entradas USING btree (categoria_id)",
+            "indisunique": false,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_entradas_estado",
+            "indexdef": "CREATE INDEX idx_entradas_estado ON public.entradas USING btree (estado)",
+            "indisunique": false,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_entradas_fecha_publicacion",
+            "indexdef": "CREATE INDEX idx_entradas_fecha_publicacion ON public.entradas USING btree (fecha_publicacion)",
+            "indisunique": false,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_entradas_slug",
+            "indexdef": "CREATE INDEX idx_entradas_slug ON public.entradas USING btree (slug)",
+            "indisunique": false,
+            "indisprimary": false
+          }
+        ],
+        "foreignKeys": [
+          {
+            "constraint_name": "entradas_autor_id_fkey",
+            "table_name": "entradas",
+            "column_name": "autor_id",
+            "foreign_table_name": "usuarios",
+            "foreign_column_name": "id"
+          },
+          {
+            "constraint_name": "entradas_categoria_id_fkey",
+            "table_name": "entradas",
+            "column_name": "categoria_id",
+            "foreign_table_name": "categorias",
+            "foreign_column_name": "id"
+          }
+        ],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "especialidades": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "especialidades",
+          "tableowner": "onkos_user",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('especialidades_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "nombre",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 2
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "especialidades_pkey",
+            "indexdef": "CREATE UNIQUE INDEX especialidades_pkey ON public.especialidades USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          }
+        ],
+        "foreignKeys": [],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "historial_citas": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "historial_citas",
+          "tableowner": "onkos_user",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('historial_citas_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "cita_id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "fecha_cambio",
+            "data_type": "timestamp without time zone",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "CURRENT_TIMESTAMP",
+            "ordinal_position": 3
+          },
+          {
+            "column_name": "estado_anterior",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 4
+          },
+          {
+            "column_name": "estado_nuevo",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 5
+          },
+          {
+            "column_name": "comentario",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 6
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "historial_citas_pkey",
+            "indexdef": "CREATE UNIQUE INDEX historial_citas_pkey ON public.historial_citas USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          },
+          {
+            "indexname": "idx_historial_por_cita",
+            "indexdef": "CREATE INDEX idx_historial_por_cita ON public.historial_citas USING btree (cita_id)",
+            "indisunique": false,
+            "indisprimary": false
+          }
+        ],
+        "foreignKeys": [
+          {
+            "constraint_name": "historial_citas_cita_id_fkey",
+            "table_name": "historial_citas",
+            "column_name": "cita_id",
+            "foreign_table_name": "citas",
+            "foreign_column_name": "id"
+          }
+        ],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "horarios_medicos": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "horarios_medicos",
+          "tableowner": "onkos_user",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('horarios_medicos_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "medico_id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "dia_semana",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 3
+          },
+          {
+            "column_name": "hora_inicio",
+            "data_type": "time without time zone",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 4
+          },
+          {
+            "column_name": "hora_fin",
+            "data_type": "time without time zone",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 5
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "horarios_medicos_pkey",
+            "indexdef": "CREATE UNIQUE INDEX horarios_medicos_pkey ON public.horarios_medicos USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          },
+          {
+            "indexname": "idx_horarios_medico_dia",
+            "indexdef": "CREATE INDEX idx_horarios_medico_dia ON public.horarios_medicos USING btree (medico_id, dia_semana)",
+            "indisunique": false,
+            "indisprimary": false
+          }
+        ],
+        "foreignKeys": [
+          {
+            "constraint_name": "horarios_medicos_medico_id_fkey",
+            "table_name": "horarios_medicos",
+            "column_name": "medico_id",
+            "foreign_table_name": "medicos",
+            "foreign_column_name": "id"
+          }
+        ],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "media": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "media",
+          "tableowner": "onkos_user",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('media_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "nombre_archivo",
+            "data_type": "character varying",
+            "character_maximum_length": 255,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "nombre_original",
+            "data_type": "character varying",
+            "character_maximum_length": 255,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 3
+          },
+          {
+            "column_name": "tipo_mime",
+            "data_type": "character varying",
+            "character_maximum_length": 100,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 4
+          },
+          {
+            "column_name": "tamaño_bytes",
+            "data_type": "bigint",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 5
+          },
+          {
+            "column_name": "url",
+            "data_type": "character varying",
+            "character_maximum_length": 500,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 6
+          },
+          {
+            "column_name": "alt_text",
+            "data_type": "character varying",
+            "character_maximum_length": 255,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 7
+          },
+          {
+            "column_name": "uploaded_by",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 8
+          },
+          {
+            "column_name": "created_at",
+            "data_type": "timestamp without time zone",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "CURRENT_TIMESTAMP",
+            "ordinal_position": 9
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "media_pkey",
+            "indexdef": "CREATE UNIQUE INDEX media_pkey ON public.media USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          }
+        ],
+        "foreignKeys": [
+          {
+            "constraint_name": "media_uploaded_by_fkey",
+            "table_name": "media",
+            "column_name": "uploaded_by",
+            "foreign_table_name": "usuarios",
+            "foreign_column_name": "id"
+          }
+        ],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "medicos": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "medicos",
+          "tableowner": "onkos_user",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('medicos_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "nombre",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "dni",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 3
+          },
+          {
+            "column_name": "correo",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 4
+          },
+          {
+            "column_name": "telefono",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 5
+          },
+          {
+            "column_name": "estado",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "'activo'::text",
+            "ordinal_position": 6
+          },
+          {
+            "column_name": "especialidad_id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 7
+          },
+          {
+            "column_name": "centro_id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 8
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "medicos_dni_key",
+            "indexdef": "CREATE UNIQUE INDEX medicos_dni_key ON public.medicos USING btree (dni)",
+            "indisunique": true,
+            "indisprimary": false
+          },
+          {
+            "indexname": "medicos_pkey",
+            "indexdef": "CREATE UNIQUE INDEX medicos_pkey ON public.medicos USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          },
+          {
+            "indexname": "idx_medicos_especialidad_estado",
+            "indexdef": "CREATE INDEX idx_medicos_especialidad_estado ON public.medicos USING btree (especialidad_id, estado)",
+            "indisunique": false,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_medicos_nombre",
+            "indexdef": "CREATE INDEX idx_medicos_nombre ON public.medicos USING btree (nombre)",
+            "indisunique": false,
+            "indisprimary": false
+          }
+        ],
+        "foreignKeys": [
+          {
+            "constraint_name": "medicos_centro_id_fkey",
+            "table_name": "medicos",
+            "column_name": "centro_id",
+            "foreign_table_name": "centro_medico",
+            "foreign_column_name": "id"
+          },
+          {
+            "constraint_name": "medicos_especialidad_id_fkey",
+            "table_name": "medicos",
+            "column_name": "especialidad_id",
+            "foreign_table_name": "especialidades",
+            "foreign_column_name": "id"
+          }
+        ],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "menu_items": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "menu_items",
+          "tableowner": "onkos_user",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('menu_items_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "titulo",
+            "data_type": "character varying",
+            "character_maximum_length": 100,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "tipo",
+            "data_type": "character varying",
+            "character_maximum_length": 20,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 3
+          },
+          {
+            "column_name": "url",
+            "data_type": "character varying",
+            "character_maximum_length": 500,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 4
+          },
+          {
+            "column_name": "orden",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "0",
+            "ordinal_position": 5
+          },
+          {
+            "column_name": "parent_id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 6
+          },
+          {
+            "column_name": "activo",
+            "data_type": "boolean",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "true",
+            "ordinal_position": 7
+          },
+          {
+            "column_name": "icono",
+            "data_type": "character varying",
+            "character_maximum_length": 50,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 8
+          },
+          {
+            "column_name": "target",
+            "data_type": "character varying",
+            "character_maximum_length": 10,
+            "is_nullable": "YES",
+            "column_default": "'_self'::character varying",
+            "ordinal_position": 9
+          },
+          {
+            "column_name": "created_at",
+            "data_type": "timestamp without time zone",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "CURRENT_TIMESTAMP",
+            "ordinal_position": 10
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "menu_items_pkey",
+            "indexdef": "CREATE UNIQUE INDEX menu_items_pkey ON public.menu_items USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          },
+          {
+            "indexname": "idx_menu_items_orden",
+            "indexdef": "CREATE INDEX idx_menu_items_orden ON public.menu_items USING btree (orden)",
+            "indisunique": false,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_menu_items_parent",
+            "indexdef": "CREATE INDEX idx_menu_items_parent ON public.menu_items USING btree (parent_id)",
+            "indisunique": false,
+            "indisprimary": false
+          }
+        ],
+        "foreignKeys": [
+          {
+            "constraint_name": "menu_items_parent_id_fkey",
+            "table_name": "menu_items",
+            "column_name": "parent_id",
+            "foreign_table_name": "menu_items",
+            "foreign_column_name": "id"
+          }
+        ],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "pacientes": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "pacientes",
+          "tableowner": "onkos_user",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('pacientes_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "nombre",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "dni",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 3
+          },
+          {
+            "column_name": "telefono",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 4
+          },
+          {
+            "column_name": "correo",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 5
+          },
+          {
+            "column_name": "fecha_nacimiento",
+            "data_type": "date",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 6
+          },
+          {
+            "column_name": "estado_vital",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "'vivo'::text",
+            "ordinal_position": 7
+          },
+          {
+            "column_name": "fecha_registro",
+            "data_type": "timestamp without time zone",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "CURRENT_TIMESTAMP",
+            "ordinal_position": 8
+          },
+          {
+            "column_name": "estado",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "'activo'::text",
+            "ordinal_position": 9
+          },
+          {
+            "column_name": "tipo_documento",
+            "data_type": "character varying",
+            "character_maximum_length": 20,
+            "is_nullable": "YES",
+            "column_default": "'DNI'::character varying",
+            "ordinal_position": 10
+          },
+          {
+            "column_name": "numero_documento",
+            "data_type": "character varying",
+            "character_maximum_length": 20,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 11
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "pacientes_dni_key",
+            "indexdef": "CREATE UNIQUE INDEX pacientes_dni_key ON public.pacientes USING btree (dni)",
+            "indisunique": true,
+            "indisprimary": false
+          },
+          {
+            "indexname": "pacientes_pkey",
+            "indexdef": "CREATE UNIQUE INDEX pacientes_pkey ON public.pacientes USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          },
+          {
+            "indexname": "idx_pacientes_dni",
+            "indexdef": "CREATE UNIQUE INDEX idx_pacientes_dni ON public.pacientes USING btree (dni)",
+            "indisunique": true,
+            "indisprimary": false
+          }
+        ],
+        "foreignKeys": [],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "permisos": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "permisos",
+          "tableowner": "onkos_user",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('permisos_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "nombre",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "descripcion",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 3
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "permisos_nombre_key",
+            "indexdef": "CREATE UNIQUE INDEX permisos_nombre_key ON public.permisos USING btree (nombre)",
+            "indisunique": true,
+            "indisprimary": false
+          },
+          {
+            "indexname": "permisos_pkey",
+            "indexdef": "CREATE UNIQUE INDEX permisos_pkey ON public.permisos USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          }
+        ],
+        "foreignKeys": [],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "rol_permiso": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "rol_permiso",
+          "tableowner": "onkos_user",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('rol_permiso_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "rol_id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "permiso_id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 3
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "rol_permiso_pkey",
+            "indexdef": "CREATE UNIQUE INDEX rol_permiso_pkey ON public.rol_permiso USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          },
+          {
+            "indexname": "rol_permiso_rol_id_permiso_id_key",
+            "indexdef": "CREATE UNIQUE INDEX rol_permiso_rol_id_permiso_id_key ON public.rol_permiso USING btree (rol_id, permiso_id)",
+            "indisunique": true,
+            "indisprimary": false
+          }
+        ],
+        "foreignKeys": [
+          {
+            "constraint_name": "rol_permiso_permiso_id_fkey",
+            "table_name": "rol_permiso",
+            "column_name": "permiso_id",
+            "foreign_table_name": "permisos",
+            "foreign_column_name": "id"
+          },
+          {
+            "constraint_name": "rol_permiso_rol_id_fkey",
+            "table_name": "rol_permiso",
+            "column_name": "rol_id",
+            "foreign_table_name": "roles",
+            "foreign_column_name": "id"
+          }
+        ],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "roles": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "roles",
+          "tableowner": "onkos_user",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('roles_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "nombre",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "descripcion",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 3
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "roles_nombre_key",
+            "indexdef": "CREATE UNIQUE INDEX roles_nombre_key ON public.roles USING btree (nombre)",
+            "indisunique": true,
+            "indisprimary": false
+          },
+          {
+            "indexname": "roles_pkey",
+            "indexdef": "CREATE UNIQUE INDEX roles_pkey ON public.roles USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          }
+        ],
+        "foreignKeys": [],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "usuario_rol": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "usuario_rol",
+          "tableowner": "onkos_user",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('usuario_rol_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "usuario_id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "rol_id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 3
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "usuario_rol_pkey",
+            "indexdef": "CREATE UNIQUE INDEX usuario_rol_pkey ON public.usuario_rol USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          },
+          {
+            "indexname": "usuario_rol_usuario_id_rol_id_key",
+            "indexdef": "CREATE UNIQUE INDEX usuario_rol_usuario_id_rol_id_key ON public.usuario_rol USING btree (usuario_id, rol_id)",
+            "indisunique": true,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_usuario_rol_rol",
+            "indexdef": "CREATE INDEX idx_usuario_rol_rol ON public.usuario_rol USING btree (rol_id)",
+            "indisunique": false,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_usuario_rol_usuario",
+            "indexdef": "CREATE INDEX idx_usuario_rol_usuario ON public.usuario_rol USING btree (usuario_id)",
+            "indisunique": false,
+            "indisprimary": false
+          }
+        ],
+        "foreignKeys": [
+          {
+            "constraint_name": "usuario_rol_rol_id_fkey",
+            "table_name": "usuario_rol",
+            "column_name": "rol_id",
+            "foreign_table_name": "roles",
+            "foreign_column_name": "id"
+          },
+          {
+            "constraint_name": "usuario_rol_usuario_id_fkey",
+            "table_name": "usuario_rol",
+            "column_name": "usuario_id",
+            "foreign_table_name": "usuarios",
+            "foreign_column_name": "id"
+          }
+        ],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "usuarios": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "usuarios",
+          "tableowner": "onkos_user",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('usuarios_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "nombre",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "correo",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 3
+          },
+          {
+            "column_name": "contraseña",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 4
+          },
+          {
+            "column_name": "estado",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "'activo'::text",
+            "ordinal_position": 5
+          },
+          {
+            "column_name": "fecha_creacion",
+            "data_type": "timestamp without time zone",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "CURRENT_TIMESTAMP",
+            "ordinal_position": 6
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "usuarios_correo_key",
+            "indexdef": "CREATE UNIQUE INDEX usuarios_correo_key ON public.usuarios USING btree (correo)",
+            "indisunique": true,
+            "indisprimary": false
+          },
+          {
+            "indexname": "usuarios_pkey",
+            "indexdef": "CREATE UNIQUE INDEX usuarios_pkey ON public.usuarios USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          },
+          {
+            "indexname": "idx_usuario_correo",
+            "indexdef": "CREATE INDEX idx_usuario_correo ON public.usuarios USING btree (correo)",
+            "indisunique": false,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_usuario_estado",
+            "indexdef": "CREATE INDEX idx_usuario_estado ON public.usuarios USING btree (estado)",
+            "indisunique": false,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_usuarios_correo",
+            "indexdef": "CREATE INDEX idx_usuarios_correo ON public.usuarios USING btree (correo)",
+            "indisunique": false,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_usuarios_estado",
+            "indexdef": "CREATE INDEX idx_usuarios_estado ON public.usuarios USING btree (estado)",
+            "indisunique": false,
+            "indisprimary": false
+          }
+        ],
+        "foreignKeys": [],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      }
+    },
+    "summary": {
+      "totalTables": 16,
+      "totalColumns": 112,
+      "totalIndexes": 46,
+      "totalForeignKeys": 14
+    }
+  },
+  "local": {
+    "tables": {
+      "categorias": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "categorias",
+          "tableowner": "postgres",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('categorias_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "nombre",
+            "data_type": "character varying",
+            "character_maximum_length": 100,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "slug",
+            "data_type": "character varying",
+            "character_maximum_length": 100,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 3
+          },
+          {
+            "column_name": "descripcion",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 4
+          },
+          {
+            "column_name": "color_hex",
+            "data_type": "character varying",
+            "character_maximum_length": 7,
+            "is_nullable": "YES",
+            "column_default": "'#667eea'::character varying",
+            "ordinal_position": 5
+          },
+          {
+            "column_name": "orden_menu",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "0",
+            "ordinal_position": 6
+          },
+          {
+            "column_name": "activo",
+            "data_type": "boolean",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "true",
+            "ordinal_position": 7
+          },
+          {
+            "column_name": "created_at",
+            "data_type": "timestamp without time zone",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "CURRENT_TIMESTAMP",
+            "ordinal_position": 8
+          },
+          {
+            "column_name": "updated_at",
+            "data_type": "timestamp without time zone",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "CURRENT_TIMESTAMP",
+            "ordinal_position": 9
+          },
+          {
+            "column_name": "parent_id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 10
+          },
+          {
+            "column_name": "nivel",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "0",
+            "ordinal_position": 11
+          },
+          {
+            "column_name": "ruta_completa",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "''::text",
+            "ordinal_position": 12
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "categorias_pkey",
+            "indexdef": "CREATE UNIQUE INDEX categorias_pkey ON public.categorias USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          },
+          {
+            "indexname": "categorias_slug_key",
+            "indexdef": "CREATE UNIQUE INDEX categorias_slug_key ON public.categorias USING btree (slug)",
+            "indisunique": true,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_categorias_slug",
+            "indexdef": "CREATE INDEX idx_categorias_slug ON public.categorias USING btree (slug)",
+            "indisunique": false,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_categorias_parent_id",
+            "indexdef": "CREATE INDEX idx_categorias_parent_id ON public.categorias USING btree (parent_id)",
+            "indisunique": false,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_categorias_nivel",
+            "indexdef": "CREATE INDEX idx_categorias_nivel ON public.categorias USING btree (nivel)",
+            "indisunique": false,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_categorias_ruta",
+            "indexdef": "CREATE INDEX idx_categorias_ruta ON public.categorias USING btree (ruta_completa)",
+            "indisunique": false,
+            "indisprimary": false
+          }
+        ],
+        "foreignKeys": [
+          {
+            "constraint_name": "categorias_parent_id_fkey",
+            "table_name": "categorias",
+            "column_name": "parent_id",
+            "foreign_table_name": "categorias",
+            "foreign_column_name": "id"
+          }
+        ],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "centro_medico": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "centro_medico",
+          "tableowner": "postgres",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('centro_medico_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "nombre",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "direccion",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 3
+          },
+          {
+            "column_name": "telefono",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 4
+          },
+          {
+            "column_name": "correo",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 5
+          },
+          {
+            "column_name": "ruc",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 6
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "centro_medico_pkey",
+            "indexdef": "CREATE UNIQUE INDEX centro_medico_pkey ON public.centro_medico USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          }
+        ],
+        "foreignKeys": [],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "citas": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "citas",
+          "tableowner": "postgres",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('citas_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "paciente_id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "medico_id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 3
+          },
+          {
+            "column_name": "fecha",
+            "data_type": "timestamp without time zone",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 4
+          },
+          {
+            "column_name": "motivo",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 5
+          },
+          {
+            "column_name": "estado",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "'agendada'::text",
+            "ordinal_position": 6
+          },
+          {
+            "column_name": "observaciones",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 7
+          },
+          {
+            "column_name": "duracion",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "30",
+            "ordinal_position": 8
+          },
+          {
+            "column_name": "fecha_creacion",
+            "data_type": "timestamp without time zone",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "CURRENT_TIMESTAMP",
+            "ordinal_position": 9
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "citas_pkey",
+            "indexdef": "CREATE UNIQUE INDEX citas_pkey ON public.citas USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          },
+          {
+            "indexname": "idx_citas_estado",
+            "indexdef": "CREATE INDEX idx_citas_estado ON public.citas USING btree (estado)",
+            "indisunique": false,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_citas_medico_fecha",
+            "indexdef": "CREATE INDEX idx_citas_medico_fecha ON public.citas USING btree (medico_id, fecha)",
+            "indisunique": false,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_citas_paciente_fecha",
+            "indexdef": "CREATE INDEX idx_citas_paciente_fecha ON public.citas USING btree (paciente_id, fecha)",
+            "indisunique": false,
+            "indisprimary": false
+          }
+        ],
+        "foreignKeys": [
+          {
+            "constraint_name": "citas_medico_id_fkey",
+            "table_name": "citas",
+            "column_name": "medico_id",
+            "foreign_table_name": "medicos",
+            "foreign_column_name": "id"
+          },
+          {
+            "constraint_name": "citas_paciente_id_fkey",
+            "table_name": "citas",
+            "column_name": "paciente_id",
+            "foreign_table_name": "pacientes",
+            "foreign_column_name": "id"
+          }
+        ],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "entrada_categorias": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "entrada_categorias",
+          "tableowner": "master",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('entrada_categorias_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "entrada_id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "categoria_id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 3
+          },
+          {
+            "column_name": "created_at",
+            "data_type": "timestamp without time zone",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "CURRENT_TIMESTAMP",
+            "ordinal_position": 4
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "entrada_categorias_pkey",
+            "indexdef": "CREATE UNIQUE INDEX entrada_categorias_pkey ON public.entrada_categorias USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          },
+          {
+            "indexname": "entrada_categorias_entrada_id_categoria_id_key",
+            "indexdef": "CREATE UNIQUE INDEX entrada_categorias_entrada_id_categoria_id_key ON public.entrada_categorias USING btree (entrada_id, categoria_id)",
+            "indisunique": true,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_entrada_categorias_entrada_id",
+            "indexdef": "CREATE INDEX idx_entrada_categorias_entrada_id ON public.entrada_categorias USING btree (entrada_id)",
+            "indisunique": false,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_entrada_categorias_categoria_id",
+            "indexdef": "CREATE INDEX idx_entrada_categorias_categoria_id ON public.entrada_categorias USING btree (categoria_id)",
+            "indisunique": false,
+            "indisprimary": false
+          }
+        ],
+        "foreignKeys": [
+          {
+            "constraint_name": "entrada_categorias_entrada_id_fkey",
+            "table_name": "entrada_categorias",
+            "column_name": "entrada_id",
+            "foreign_table_name": "entradas",
+            "foreign_column_name": "id"
+          },
+          {
+            "constraint_name": "entrada_categorias_categoria_id_fkey",
+            "table_name": "entrada_categorias",
+            "column_name": "categoria_id",
+            "foreign_table_name": "categorias",
+            "foreign_column_name": "id"
+          }
+        ],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "entradas": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "entradas",
+          "tableowner": "postgres",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('entradas_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "titulo",
+            "data_type": "character varying",
+            "character_maximum_length": 255,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "slug",
+            "data_type": "character varying",
+            "character_maximum_length": 255,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 3
+          },
+          {
+            "column_name": "contenido",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 4
+          },
+          {
+            "column_name": "resumen",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 5
+          },
+          {
+            "column_name": "imagen_principal",
+            "data_type": "character varying",
+            "character_maximum_length": 500,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 6
+          },
+          {
+            "column_name": "autor_id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 8
+          },
+          {
+            "column_name": "estado",
+            "data_type": "character varying",
+            "character_maximum_length": 20,
+            "is_nullable": "YES",
+            "column_default": "'borrador'::character varying",
+            "ordinal_position": 9
+          },
+          {
+            "column_name": "fecha_publicacion",
+            "data_type": "timestamp without time zone",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 10
+          },
+          {
+            "column_name": "meta_title",
+            "data_type": "character varying",
+            "character_maximum_length": 255,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 11
+          },
+          {
+            "column_name": "meta_description",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 12
+          },
+          {
+            "column_name": "tags",
+            "data_type": "jsonb",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "'[]'::jsonb",
+            "ordinal_position": 13
+          },
+          {
+            "column_name": "vistas",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "0",
+            "ordinal_position": 14
+          },
+          {
+            "column_name": "destacado",
+            "data_type": "boolean",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "false",
+            "ordinal_position": 15
+          },
+          {
+            "column_name": "orden",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "0",
+            "ordinal_position": 16
+          },
+          {
+            "column_name": "created_at",
+            "data_type": "timestamp without time zone",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "CURRENT_TIMESTAMP",
+            "ordinal_position": 17
+          },
+          {
+            "column_name": "updated_at",
+            "data_type": "timestamp without time zone",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "CURRENT_TIMESTAMP",
+            "ordinal_position": 18
+          },
+          {
+            "column_name": "tipo_entrada",
+            "data_type": "character varying",
+            "character_maximum_length": 20,
+            "is_nullable": "YES",
+            "column_default": "'entrada'::character varying",
+            "ordinal_position": 19
+          },
+          {
+            "column_name": "categoria_id_backup",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 20
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "entradas_pkey",
+            "indexdef": "CREATE UNIQUE INDEX entradas_pkey ON public.entradas USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          },
+          {
+            "indexname": "entradas_slug_key",
+            "indexdef": "CREATE UNIQUE INDEX entradas_slug_key ON public.entradas USING btree (slug)",
+            "indisunique": true,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_entradas_estado",
+            "indexdef": "CREATE INDEX idx_entradas_estado ON public.entradas USING btree (estado)",
+            "indisunique": false,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_entradas_fecha_publicacion",
+            "indexdef": "CREATE INDEX idx_entradas_fecha_publicacion ON public.entradas USING btree (fecha_publicacion)",
+            "indisunique": false,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_entradas_slug",
+            "indexdef": "CREATE INDEX idx_entradas_slug ON public.entradas USING btree (slug)",
+            "indisunique": false,
+            "indisprimary": false
+          }
+        ],
+        "foreignKeys": [
+          {
+            "constraint_name": "entradas_autor_id_fkey",
+            "table_name": "entradas",
+            "column_name": "autor_id",
+            "foreign_table_name": "usuarios",
+            "foreign_column_name": "id"
+          }
+        ],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "especialidades": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "especialidades",
+          "tableowner": "postgres",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('especialidades_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "nombre",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 2
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "especialidades_pkey",
+            "indexdef": "CREATE UNIQUE INDEX especialidades_pkey ON public.especialidades USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          }
+        ],
+        "foreignKeys": [],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "historial_citas": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "historial_citas",
+          "tableowner": "postgres",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('historial_citas_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "cita_id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "fecha_cambio",
+            "data_type": "timestamp without time zone",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "CURRENT_TIMESTAMP",
+            "ordinal_position": 3
+          },
+          {
+            "column_name": "estado_anterior",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 4
+          },
+          {
+            "column_name": "estado_nuevo",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 5
+          },
+          {
+            "column_name": "comentario",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 6
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "historial_citas_pkey",
+            "indexdef": "CREATE UNIQUE INDEX historial_citas_pkey ON public.historial_citas USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          },
+          {
+            "indexname": "idx_historial_por_cita",
+            "indexdef": "CREATE INDEX idx_historial_por_cita ON public.historial_citas USING btree (cita_id)",
+            "indisunique": false,
+            "indisprimary": false
+          }
+        ],
+        "foreignKeys": [
+          {
+            "constraint_name": "historial_citas_cita_id_fkey",
+            "table_name": "historial_citas",
+            "column_name": "cita_id",
+            "foreign_table_name": "citas",
+            "foreign_column_name": "id"
+          }
+        ],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "horarios_medicos": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "horarios_medicos",
+          "tableowner": "postgres",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('horarios_medicos_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "medico_id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "dia_semana",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 3
+          },
+          {
+            "column_name": "hora_inicio",
+            "data_type": "time without time zone",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 4
+          },
+          {
+            "column_name": "hora_fin",
+            "data_type": "time without time zone",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 5
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "horarios_medicos_pkey",
+            "indexdef": "CREATE UNIQUE INDEX horarios_medicos_pkey ON public.horarios_medicos USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          },
+          {
+            "indexname": "idx_horarios_medico_dia",
+            "indexdef": "CREATE INDEX idx_horarios_medico_dia ON public.horarios_medicos USING btree (medico_id, dia_semana)",
+            "indisunique": false,
+            "indisprimary": false
+          }
+        ],
+        "foreignKeys": [
+          {
+            "constraint_name": "horarios_medicos_medico_id_fkey",
+            "table_name": "horarios_medicos",
+            "column_name": "medico_id",
+            "foreign_table_name": "medicos",
+            "foreign_column_name": "id"
+          }
+        ],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "media": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "media",
+          "tableowner": "postgres",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('media_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "nombre_archivo",
+            "data_type": "character varying",
+            "character_maximum_length": 255,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "nombre_original",
+            "data_type": "character varying",
+            "character_maximum_length": 255,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 3
+          },
+          {
+            "column_name": "tipo_mime",
+            "data_type": "character varying",
+            "character_maximum_length": 100,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 4
+          },
+          {
+            "column_name": "tamaño_bytes",
+            "data_type": "bigint",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 5
+          },
+          {
+            "column_name": "url",
+            "data_type": "character varying",
+            "character_maximum_length": 500,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 6
+          },
+          {
+            "column_name": "alt_text",
+            "data_type": "character varying",
+            "character_maximum_length": 255,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 7
+          },
+          {
+            "column_name": "uploaded_by",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 8
+          },
+          {
+            "column_name": "created_at",
+            "data_type": "timestamp without time zone",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "CURRENT_TIMESTAMP",
+            "ordinal_position": 9
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "media_pkey",
+            "indexdef": "CREATE UNIQUE INDEX media_pkey ON public.media USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          }
+        ],
+        "foreignKeys": [
+          {
+            "constraint_name": "media_uploaded_by_fkey",
+            "table_name": "media",
+            "column_name": "uploaded_by",
+            "foreign_table_name": "usuarios",
+            "foreign_column_name": "id"
+          }
+        ],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "medicos": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "medicos",
+          "tableowner": "postgres",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('medicos_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "nombre",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "dni",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 3
+          },
+          {
+            "column_name": "correo",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 4
+          },
+          {
+            "column_name": "telefono",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 5
+          },
+          {
+            "column_name": "estado",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "'activo'::text",
+            "ordinal_position": 6
+          },
+          {
+            "column_name": "especialidad_id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 7
+          },
+          {
+            "column_name": "centro_id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 8
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "medicos_dni_key",
+            "indexdef": "CREATE UNIQUE INDEX medicos_dni_key ON public.medicos USING btree (dni)",
+            "indisunique": true,
+            "indisprimary": false
+          },
+          {
+            "indexname": "medicos_pkey",
+            "indexdef": "CREATE UNIQUE INDEX medicos_pkey ON public.medicos USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          },
+          {
+            "indexname": "idx_medicos_especialidad_estado",
+            "indexdef": "CREATE INDEX idx_medicos_especialidad_estado ON public.medicos USING btree (especialidad_id, estado)",
+            "indisunique": false,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_medicos_nombre",
+            "indexdef": "CREATE INDEX idx_medicos_nombre ON public.medicos USING btree (nombre)",
+            "indisunique": false,
+            "indisprimary": false
+          }
+        ],
+        "foreignKeys": [
+          {
+            "constraint_name": "medicos_centro_id_fkey",
+            "table_name": "medicos",
+            "column_name": "centro_id",
+            "foreign_table_name": "centro_medico",
+            "foreign_column_name": "id"
+          },
+          {
+            "constraint_name": "medicos_especialidad_id_fkey",
+            "table_name": "medicos",
+            "column_name": "especialidad_id",
+            "foreign_table_name": "especialidades",
+            "foreign_column_name": "id"
+          }
+        ],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "menu_items": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "menu_items",
+          "tableowner": "postgres",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('menu_items_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "titulo",
+            "data_type": "character varying",
+            "character_maximum_length": 100,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "tipo",
+            "data_type": "character varying",
+            "character_maximum_length": 20,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 3
+          },
+          {
+            "column_name": "url",
+            "data_type": "character varying",
+            "character_maximum_length": 500,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 4
+          },
+          {
+            "column_name": "orden",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "0",
+            "ordinal_position": 5
+          },
+          {
+            "column_name": "parent_id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 6
+          },
+          {
+            "column_name": "activo",
+            "data_type": "boolean",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "true",
+            "ordinal_position": 7
+          },
+          {
+            "column_name": "icono",
+            "data_type": "character varying",
+            "character_maximum_length": 50,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 8
+          },
+          {
+            "column_name": "target",
+            "data_type": "character varying",
+            "character_maximum_length": 10,
+            "is_nullable": "YES",
+            "column_default": "'_self'::character varying",
+            "ordinal_position": 9
+          },
+          {
+            "column_name": "created_at",
+            "data_type": "timestamp without time zone",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "CURRENT_TIMESTAMP",
+            "ordinal_position": 10
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "menu_items_pkey",
+            "indexdef": "CREATE UNIQUE INDEX menu_items_pkey ON public.menu_items USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          },
+          {
+            "indexname": "idx_menu_items_parent",
+            "indexdef": "CREATE INDEX idx_menu_items_parent ON public.menu_items USING btree (parent_id)",
+            "indisunique": false,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_menu_items_orden",
+            "indexdef": "CREATE INDEX idx_menu_items_orden ON public.menu_items USING btree (orden)",
+            "indisunique": false,
+            "indisprimary": false
+          }
+        ],
+        "foreignKeys": [
+          {
+            "constraint_name": "menu_items_parent_id_fkey",
+            "table_name": "menu_items",
+            "column_name": "parent_id",
+            "foreign_table_name": "menu_items",
+            "foreign_column_name": "id"
+          }
+        ],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "pacientes": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "pacientes",
+          "tableowner": "postgres",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('pacientes_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "nombre",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "dni",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 3
+          },
+          {
+            "column_name": "telefono",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 4
+          },
+          {
+            "column_name": "correo",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 5
+          },
+          {
+            "column_name": "fecha_nacimiento",
+            "data_type": "date",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 6
+          },
+          {
+            "column_name": "estado_vital",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "'vivo'::text",
+            "ordinal_position": 7
+          },
+          {
+            "column_name": "fecha_registro",
+            "data_type": "timestamp without time zone",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "CURRENT_TIMESTAMP",
+            "ordinal_position": 8
+          },
+          {
+            "column_name": "estado",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "'activo'::text",
+            "ordinal_position": 9
+          },
+          {
+            "column_name": "tipo_documento",
+            "data_type": "character varying",
+            "character_maximum_length": 20,
+            "is_nullable": "YES",
+            "column_default": "'DNI'::character varying",
+            "ordinal_position": 10
+          },
+          {
+            "column_name": "numero_documento",
+            "data_type": "character varying",
+            "character_maximum_length": 20,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 11
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "pacientes_dni_key",
+            "indexdef": "CREATE UNIQUE INDEX pacientes_dni_key ON public.pacientes USING btree (dni)",
+            "indisunique": true,
+            "indisprimary": false
+          },
+          {
+            "indexname": "pacientes_pkey",
+            "indexdef": "CREATE UNIQUE INDEX pacientes_pkey ON public.pacientes USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          },
+          {
+            "indexname": "idx_pacientes_dni",
+            "indexdef": "CREATE UNIQUE INDEX idx_pacientes_dni ON public.pacientes USING btree (dni)",
+            "indisunique": true,
+            "indisprimary": false
+          }
+        ],
+        "foreignKeys": [],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "permisos": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "permisos",
+          "tableowner": "postgres",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('permisos_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "nombre",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "descripcion",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 3
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "permisos_nombre_key",
+            "indexdef": "CREATE UNIQUE INDEX permisos_nombre_key ON public.permisos USING btree (nombre)",
+            "indisunique": true,
+            "indisprimary": false
+          },
+          {
+            "indexname": "permisos_pkey",
+            "indexdef": "CREATE UNIQUE INDEX permisos_pkey ON public.permisos USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          }
+        ],
+        "foreignKeys": [],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "rol_permiso": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "rol_permiso",
+          "tableowner": "postgres",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('rol_permiso_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "rol_id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "permiso_id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 3
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "rol_permiso_pkey",
+            "indexdef": "CREATE UNIQUE INDEX rol_permiso_pkey ON public.rol_permiso USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          },
+          {
+            "indexname": "rol_permiso_rol_id_permiso_id_key",
+            "indexdef": "CREATE UNIQUE INDEX rol_permiso_rol_id_permiso_id_key ON public.rol_permiso USING btree (rol_id, permiso_id)",
+            "indisunique": true,
+            "indisprimary": false
+          }
+        ],
+        "foreignKeys": [
+          {
+            "constraint_name": "rol_permiso_permiso_id_fkey",
+            "table_name": "rol_permiso",
+            "column_name": "permiso_id",
+            "foreign_table_name": "permisos",
+            "foreign_column_name": "id"
+          },
+          {
+            "constraint_name": "rol_permiso_rol_id_fkey",
+            "table_name": "rol_permiso",
+            "column_name": "rol_id",
+            "foreign_table_name": "roles",
+            "foreign_column_name": "id"
+          }
+        ],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "roles": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "roles",
+          "tableowner": "postgres",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('roles_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "nombre",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "descripcion",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 3
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "roles_nombre_key",
+            "indexdef": "CREATE UNIQUE INDEX roles_nombre_key ON public.roles USING btree (nombre)",
+            "indisunique": true,
+            "indisprimary": false
+          },
+          {
+            "indexname": "roles_pkey",
+            "indexdef": "CREATE UNIQUE INDEX roles_pkey ON public.roles USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          }
+        ],
+        "foreignKeys": [],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "usuario_rol": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "usuario_rol",
+          "tableowner": "postgres",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('usuario_rol_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "usuario_id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "rol_id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": null,
+            "ordinal_position": 3
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "usuario_rol_pkey",
+            "indexdef": "CREATE UNIQUE INDEX usuario_rol_pkey ON public.usuario_rol USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          },
+          {
+            "indexname": "usuario_rol_usuario_id_rol_id_key",
+            "indexdef": "CREATE UNIQUE INDEX usuario_rol_usuario_id_rol_id_key ON public.usuario_rol USING btree (usuario_id, rol_id)",
+            "indisunique": true,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_usuario_rol_usuario",
+            "indexdef": "CREATE INDEX idx_usuario_rol_usuario ON public.usuario_rol USING btree (usuario_id)",
+            "indisunique": false,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_usuario_rol_rol",
+            "indexdef": "CREATE INDEX idx_usuario_rol_rol ON public.usuario_rol USING btree (rol_id)",
+            "indisunique": false,
+            "indisprimary": false
+          }
+        ],
+        "foreignKeys": [
+          {
+            "constraint_name": "usuario_rol_rol_id_fkey",
+            "table_name": "usuario_rol",
+            "column_name": "rol_id",
+            "foreign_table_name": "roles",
+            "foreign_column_name": "id"
+          },
+          {
+            "constraint_name": "usuario_rol_usuario_id_fkey",
+            "table_name": "usuario_rol",
+            "column_name": "usuario_id",
+            "foreign_table_name": "usuarios",
+            "foreign_column_name": "id"
+          }
+        ],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      },
+      "usuarios": {
+        "info": {
+          "schemaname": "public",
+          "tablename": "usuarios",
+          "tableowner": "postgres",
+          "hasindexes": true,
+          "hasrules": false,
+          "hastriggers": true,
+          "rowsecurity": false
+        },
+        "columns": [
+          {
+            "column_name": "id",
+            "data_type": "integer",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": "nextval('usuarios_id_seq'::regclass)",
+            "ordinal_position": 1
+          },
+          {
+            "column_name": "nombre",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 2
+          },
+          {
+            "column_name": "correo",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 3
+          },
+          {
+            "column_name": "contraseña",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "NO",
+            "column_default": null,
+            "ordinal_position": 4
+          },
+          {
+            "column_name": "estado",
+            "data_type": "text",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "'activo'::text",
+            "ordinal_position": 5
+          },
+          {
+            "column_name": "fecha_creacion",
+            "data_type": "timestamp without time zone",
+            "character_maximum_length": null,
+            "is_nullable": "YES",
+            "column_default": "CURRENT_TIMESTAMP",
+            "ordinal_position": 6
+          }
+        ],
+        "indexes": [
+          {
+            "indexname": "usuarios_correo_key",
+            "indexdef": "CREATE UNIQUE INDEX usuarios_correo_key ON public.usuarios USING btree (correo)",
+            "indisunique": true,
+            "indisprimary": false
+          },
+          {
+            "indexname": "usuarios_pkey",
+            "indexdef": "CREATE UNIQUE INDEX usuarios_pkey ON public.usuarios USING btree (id)",
+            "indisunique": true,
+            "indisprimary": true
+          },
+          {
+            "indexname": "idx_usuario_correo",
+            "indexdef": "CREATE INDEX idx_usuario_correo ON public.usuarios USING btree (correo)",
+            "indisunique": false,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_usuario_estado",
+            "indexdef": "CREATE INDEX idx_usuario_estado ON public.usuarios USING btree (estado)",
+            "indisunique": false,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_usuarios_correo",
+            "indexdef": "CREATE INDEX idx_usuarios_correo ON public.usuarios USING btree (correo)",
+            "indisunique": false,
+            "indisprimary": false
+          },
+          {
+            "indexname": "idx_usuarios_estado",
+            "indexdef": "CREATE INDEX idx_usuarios_estado ON public.usuarios USING btree (estado)",
+            "indisunique": false,
+            "indisprimary": false
+          }
+        ],
+        "foreignKeys": [],
+        "primaryKeys": [
+          {
+            "column_name": "id"
+          }
+        ]
+      }
+    },
+    "summary": {
+      "totalTables": 17,
+      "totalColumns": 119,
+      "totalIndexes": 52,
+      "totalForeignKeys": 16
+    }
+  },
+  "differences": [
+    {
+      "type": "MISSING_COLUMN",
+      "table": "categorias",
+      "column": "parent_id",
+      "location": "production",
+      "message": "La columna 'parent_id' no existe en producción"
+    },
+    {
+      "type": "MISSING_COLUMN",
+      "table": "categorias",
+      "column": "nivel",
+      "location": "production",
+      "message": "La columna 'nivel' no existe en producción"
+    },
+    {
+      "type": "MISSING_COLUMN",
+      "table": "categorias",
+      "column": "ruta_completa",
+      "location": "production",
+      "message": "La columna 'ruta_completa' no existe en producción"
+    },
+    {
+      "type": "MISSING_INDEX",
+      "table": "categorias",
+      "index": "idx_categorias_parent_id",
+      "location": "production",
+      "message": "El índice 'idx_categorias_parent_id' no existe en producción"
+    },
+    {
+      "type": "MISSING_INDEX",
+      "table": "categorias",
+      "index": "idx_categorias_nivel",
+      "location": "production",
+      "message": "El índice 'idx_categorias_nivel' no existe en producción"
+    },
+    {
+      "type": "MISSING_INDEX",
+      "table": "categorias",
+      "index": "idx_categorias_ruta",
+      "location": "production",
+      "message": "El índice 'idx_categorias_ruta' no existe en producción"
+    },
+    {
+      "type": "MISSING_FOREIGN_KEY",
+      "table": "categorias",
+      "constraint": "categorias_parent_id_fkey",
+      "location": "production",
+      "message": "La foreign key 'categorias_parent_id_fkey' no existe en producción"
+    },
+    {
+      "type": "MISSING_COLUMN",
+      "table": "entradas",
+      "column": "categoria_id",
+      "location": "local",
+      "message": "La columna 'categoria_id' no existe en local"
+    },
+    {
+      "type": "MISSING_COLUMN",
+      "table": "entradas",
+      "column": "categoria_id_backup",
+      "location": "production",
+      "message": "La columna 'categoria_id_backup' no existe en producción"
+    },
+    {
+      "type": "MISSING_INDEX",
+      "table": "entradas",
+      "index": "idx_entradas_categoria",
+      "location": "local",
+      "message": "El índice 'idx_entradas_categoria' no existe en local"
+    },
+    {
+      "type": "MISSING_FOREIGN_KEY",
+      "table": "entradas",
+      "constraint": "entradas_categoria_id_fkey",
+      "location": "local",
+      "message": "La foreign key 'entradas_categoria_id_fkey' no existe en local"
+    },
+    {
+      "type": "MISSING_TABLE",
+      "table": "entrada_categorias",
+      "location": "production",
+      "message": "La tabla 'entrada_categorias' no existe en producción"
+    }
+  ]
+}

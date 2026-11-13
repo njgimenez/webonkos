@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Comparación de Bases de Datos</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #333; text-align: center; }
+        h2 { color: #555; border-bottom: 2px solid #ddd; padding-bottom: 10px; }
+        .summary { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
+        .summary-card { background: #f8f9fa; padding: 15px; border-radius: 5px; border-left: 4px solid #007bff; }
+        .summary-card h3 { margin: 0 0 10px 0; color: #007bff; }
+        .difference { margin: 10px 0; padding: 15px; border-radius: 5px; border-left: 4px solid #dc3545; background: #f8d7da; }
+        .difference.missing { border-left-color: #ffc107; background: #fff3cd; }
+        .difference.mismatch { border-left-color: #dc3545; background: #f8d7da; }
+        .difference-type { font-weight: bold; color: #721c24; }
+        .difference.missing .difference-type { color: #856404; }
+        .no-differences { text-align: center; color: #28a745; font-size: 18px; padding: 40px; background: #d4edda; border-radius: 5px; }
+        .timestamp { text-align: center; color: #666; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Reporte de Comparación de Bases de Datos</h1>
+        
+        <div class="summary">
+            <div class="summary-card">
+                <h3>📊 Base de Datos de Producción</h3>
+                <p><strong>Tablas:</strong> 16</p>
+                <p><strong>Columnas:</strong> 112</p>
+                <p><strong>Índices:</strong> 46</p>
+                <p><strong>Foreign Keys:</strong> 14</p>
+            </div>
+            <div class="summary-card">
+                <h3>💻 Base de Datos Local</h3>
+                <p><strong>Tablas:</strong> 17</p>
+                <p><strong>Columnas:</strong> 119</p>
+                <p><strong>Índices:</strong> 52</p>
+                <p><strong>Foreign Keys:</strong> 16</p>
+            </div>
+        </div>
+
+        <h2>🔍 Diferencias Encontradas</h2>
+        
+        
+                <div class="difference missing">
+                    <div class="difference-type">📝 Columna Faltante</div>
+                    <div>La columna 'parent_id' no existe en producción</div>
+                    
+                </div>
+            
+                <div class="difference missing">
+                    <div class="difference-type">📝 Columna Faltante</div>
+                    <div>La columna 'nivel' no existe en producción</div>
+                    
+                </div>
+            
+                <div class="difference missing">
+                    <div class="difference-type">📝 Columna Faltante</div>
+                    <div>La columna 'ruta_completa' no existe en producción</div>
+                    
+                </div>
+            
+                <div class="difference missing">
+                    <div class="difference-type">🔍 Índice Faltante</div>
+                    <div>El índice 'idx_categorias_parent_id' no existe en producción</div>
+                    
+                </div>
+            
+                <div class="difference missing">
+                    <div class="difference-type">🔍 Índice Faltante</div>
+                    <div>El índice 'idx_categorias_nivel' no existe en producción</div>
+                    
+                </div>
+            
+                <div class="difference missing">
+                    <div class="difference-type">🔍 Índice Faltante</div>
+                    <div>El índice 'idx_categorias_ruta' no existe en producción</div>
+                    
+                </div>
+            
+                <div class="difference missing">
+                    <div class="difference-type">🔗 Foreign Key Faltante</div>
+                    <div>La foreign key 'categorias_parent_id_fkey' no existe en producción</div>
+                    
+                </div>
+            
+                <div class="difference missing">
+                    <div class="difference-type">📝 Columna Faltante</div>
+                    <div>La columna 'categoria_id' no existe en local</div>
+                    
+                </div>
+            
+                <div class="difference missing">
+                    <div class="difference-type">📝 Columna Faltante</div>
+                    <div>La columna 'categoria_id_backup' no existe en producción</div>
+                    
+                </div>
+            
+                <div class="difference missing">
+                    <div class="difference-type">🔍 Índice Faltante</div>
+                    <div>El índice 'idx_entradas_categoria' no existe en local</div>
+                    
+                </div>
+            
+                <div class="difference missing">
+                    <div class="difference-type">🔗 Foreign Key Faltante</div>
+                    <div>La foreign key 'entradas_categoria_id_fkey' no existe en local</div>
+                    
+                </div>
+            
+                <div class="difference missing">
+                    <div class="difference-type">📋 Tabla Faltante</div>
+                    <div>La tabla 'entrada_categorias' no existe en producción</div>
+                    
+                </div>
+            
+
+        <div class="timestamp">
+            Reporte generado el 12/9/2025, 12:15:03
+        </div>
+    </div>
+</body>
+</html>
