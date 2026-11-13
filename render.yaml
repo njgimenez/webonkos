@@ -1,10 +1,11 @@
 services:
   - type: web
     name: onkos-backend
-    env: node
+    runtime: node
+    rootDir: backend
     plan: free
-    buildCommand: cd backend && npm install
-    startCommand: cd backend && node server.js
+    buildCommand: npm install
+    startCommand: node server.js
     envVars:
       - key: NODE_ENV
         value: production
@@ -14,10 +15,11 @@ services:
 
   - type: web
     name: onkos-frontend
-    env: static
+    runtime: static
+    rootDir: frontend
     plan: free
-    buildCommand: cd frontend && npm install && npm run build
-    staticPublishPath: frontend/dist
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
     routes:
       - type: rewrite
         source: /*
